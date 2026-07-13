@@ -9,9 +9,19 @@ This repository is exploring a model-agnostic method for improving documentation
 
 ## Current status
 
-The toolkit has not yet been implemented. The repository is in an initial evidence-gathering stage.
+The project remains in evidence gathering. It is not yet a stable V1 toolkit.
 
-The first proposed experiment is tracked in [issue #1](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/1). It is intended to test whether a repository-aware agent can produce a documentation baseline, task-path evaluations and an evidence-backed remediation backlog without changing the target repository.
+The first assessment-only experiment was completed against [`8ft0-ai/RaceIQ`](experiments/raceiq/README.md). Its close-out recommendation was **Adapt**: retain the evidence-led workflow, but reduce record duplication, distinguish source inspection from execution evidence, add a human task-approval checkpoint and provide lighter adoption paths.
+
+The current stage is tracked in [issue #7](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/7). It will test the adapted method against a materially different repository using clean-context task execution and a separate evidence review before deciding whether minimal V1 packaging is justified.
+
+The provisional working records for that stage are in [`working/method-v0.2/`](working/method-v0.2/README.md):
+
+- [working method and evidence rules](working/method-v0.2/README.md);
+- [experiment plan record](working/method-v0.2/experiment-plan.md);
+- [assessment and close-out record](working/method-v0.2/assessment-closeout.md).
+
+These records are experimental. They do not define a required repository structure, approve automation or establish cross-repository generality.
 
 The name **TaskFirstDocs** remains provisional until explicitly approved.
 
