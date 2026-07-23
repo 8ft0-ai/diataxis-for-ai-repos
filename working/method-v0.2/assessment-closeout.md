@@ -30,12 +30,21 @@ State the decision question this assessment is intended to answer.
 - **Credentials or secrets used:** none / describe explicit authority
 - **Prohibited operations confirmed:**
 
-### Target immutability evidence
+### Target state and local side-effect evidence
+
+Record remote state, canonical source and disposable local effects separately. Do not collapse them into one clean or dirty result.
 
 - **Starting commit check:**
-- **Initial working-tree state:**
-- **Final working-tree state:**
-- **Target GitHub objects changed:** none / describe incident and remediation
+- **Remote target unchanged:** yes / no / not verified — evidence
+- **Canonical tracked source unchanged:** yes / no / not verified — evidence
+- **Generated local artefacts observed:** none / list paths and cause
+- **Disposable workspace restored:** yes / no / not required — evidence
+- **Final working-tree or source-state check:**
+- **Target GitHub objects changed:** none / describe Class A incident and remediation
+- **Mutation or side-effect classification:** none / Class A / Class B / Class C
+- **Incident or deviation record:**
+
+A workspace may become temporarily dirty while approved commands run. Record expected Class C artefacts and recoverable Class B deviations accurately. A clean final state may still be required by the approved plan.
 
 ## 2. Evidence register
 
@@ -75,6 +84,7 @@ Copy this section once for each approved task.
 - **Expected documentation entry point:**
 - **Actual path followed:**
 - **Commands or interactions:**
+- **Local side effects and recovery:** none / Class B / Class C — evidence
 - **Execution-evidence states:**
   - [ ] Source inspected
   - [ ] Command executed
@@ -93,7 +103,7 @@ Copy this section once for each approved task.
 
 Evidence states are non-exclusive. Select only states supported by what was actually performed.
 
-A successful command is not automatically clean-context completion. Source inspection is not runtime observation. A fresh agent review is not human validation.
+A successful command is not automatically clean-context completion. Source inspection is not runtime observation. A fresh agent review is not human validation. Expected or recovered local effects do not by themselves mean the remote target or canonical source changed.
 
 ## 5. Findings
 
