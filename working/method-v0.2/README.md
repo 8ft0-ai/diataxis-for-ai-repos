@@ -211,15 +211,17 @@ Executable walkthroughs should distinguish four separate observations:
 - which generated local artefacts were observed;
 - whether the disposable workspace was restored when required.
 
+The **effect boundary** describes where an effect occurred: a remote or protected target, canonical tracked source, or generated local state. The **event class** describes the required Class A, B or C response. One task or command may produce several distinct events and classes; record each material event separately.
+
 Use the mutation and recovery classes defined in [`docs/issueops.md`](../../docs/issueops.md):
 
-- **Class A — Protected or unbounded mutation:** stop normal work and require maintainer direction after minimum safe remediation and an incident record.
-- **Class B — Recoverable local execution deviation:** pause the affected operation, bound and record the effect, restore or recreate the disposable workspace, verify the restored state and continue only within the original authority boundary.
-- **Class C — Expected local side effect:** permit expected caches, package metadata, virtual environments and generated output inside approved disposable paths; record where material and clean or recreate before final verification when required.
+- **Class A — Protected or unbounded mutation:** stop normal work and require maintainer direction after minimum safe remediation and an incident record. This includes effects that require new intent or authority.
+- **Class B — Recoverable local execution deviation:** when an authorised operation produces an unexpected bounded effect, pause the affected operation, record the effect, restore or recreate the disposable workspace, verify the restored state and continue only within the original authority boundary.
+- **Class C — Expected local side effect:** permit expected caches, package metadata, virtual environments and generated output from authorised operations inside approved disposable paths; record where material and clean or recreate before final verification when required.
 
 A clean final state may be required evidence. The workspace does not need to remain continuously clean while explicitly approved commands run inside the disposable boundary.
 
-Escalate a Class B or C effect to Class A when it escapes the approved environment, changes remote or protected state, cannot be confidently bounded, or cannot be safely restored. Do not use local recoverability to excuse unauthorised source changes.
+Escalate a Class B or C effect to Class A when it escapes the approved environment, changes remote or protected state, requires new intent or authority, cannot be confidently bounded, or cannot be safely restored. Do not use local recoverability to excuse unauthorised source changes.
 
 ## Stopping conditions
 
