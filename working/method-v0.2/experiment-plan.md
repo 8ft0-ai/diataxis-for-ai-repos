@@ -120,6 +120,19 @@ List the exact read, clone, install, build, test, runtime or fixture operations 
 
 List disposable environments, fixtures, caches or generated outputs that may be created and where they will live.
 
+### Local side-effect plan
+
+Classify the effect and recovery boundary before running commands that may create local files.
+
+- **Side-effect class:** protected / tracked source / generated local
+- **Expected local side effects:**
+- **Permitted generated paths:**
+- **Tracked files that must remain unchanged:**
+- **Recovery if observed:** stop and escalate / restore and continue / clean at close-out
+- **Conditions requiring escalation:**
+
+Use the [working method mutation classes](README.md#local-execution-effects-and-target-state). An expected Class C artefact becomes Class B when it appears outside the planned path but remains bounded and recoverable. Escalate to Class A when the effect escapes the disposable boundary, changes remote or protected state, cannot be confidently bounded, or cannot be safely restored.
+
 ### Prohibited operations
 
 State protected side effects explicitly, including as applicable:
@@ -134,12 +147,17 @@ State protected side effects explicitly, including as applicable:
 
 ### Immutability and safe-operation evidence
 
-Record how the target state will be checked before and after execution.
+Record the protected target, canonical source and disposable generated-output boundaries separately.
 
-- **Starting commit check:**
-- **Working-tree check:**
-- **Generated-output boundary:**
-- **Cleanup or retention policy:**
+- **Remote target starting-state check:**
+- **Canonical tracked-source starting-state check:**
+- **Expected generated-output boundary:**
+- **Workspace restoration method:**
+- **Final remote target check:**
+- **Final canonical tracked-source check:**
+- **Final disposable workspace check:**
+
+A clean final workspace may be required by the contract. It does not need to remain continuously clean while explicitly approved commands execute inside the disposable boundary.
 
 ## 7. Review boundary
 
@@ -211,9 +229,12 @@ In addition to the method-level stopping conditions, stop when:
 - the actual target interface materially differs from the approved evidence basis;
 - a task must be silently redefined to make it executable;
 - required validation cannot distinguish success from failure;
-- an unintended mutation occurs.
+- a Class A protected or unbounded mutation occurs;
+- a Class B effect cannot be confidently bounded, restored or verified inside the original authority boundary.
 
-Record the blocker and request the exact decision needed. Do not substitute a different task or broaden the experiment without approval.
+Expected Class C artefacts and recoverable Class B deviations do not require full maintainer reauthorisation when the approved recovery conditions are satisfied. Record them accurately and preserve the evidence already produced.
+
+Record the blocker and request the exact decision needed when escalation is required. Do not substitute a different task or broaden the experiment without approval.
 
 ## 10. Readiness for execution
 
@@ -222,6 +243,7 @@ Record the blocker and request the exact decision needed. Do not substitute a di
 - **Target commit verified:** yes / no
 - **Task approval complete:** yes / no
 - **Execution boundary complete:** yes / no
+- **Local side-effect plan complete:** yes / no
 - **Review boundary complete:** yes / no
 - **Safe starting state recorded:** yes / no
 - **Decision:** Ready to execute / clarification required / blocked
