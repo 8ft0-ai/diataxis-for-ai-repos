@@ -202,6 +202,27 @@ Do not reconstruct undocumented intent from outputs or code. Do not enlarge a ch
 
 The agent that drafts a change should not be treated as independent validation of its own work.
 
+## Local execution effects and target state
+
+Executable walkthroughs should distinguish four separate observations:
+
+- whether the remote target changed;
+- whether canonical tracked source changed;
+- which generated local artefacts were observed;
+- whether the disposable workspace was restored when required.
+
+The **effect boundary** describes where an effect occurred: a remote or protected target, canonical tracked source, or generated local state. The **event class** describes the required Class A, B or C response. One task or command may produce several distinct events and classes; record each material event separately.
+
+Use the mutation and recovery classes defined in [`docs/issueops.md`](../../docs/issueops.md):
+
+- **Class A — Protected or unbounded mutation:** stop normal work and require maintainer direction after minimum safe remediation and an incident record. This includes effects that require new intent or authority.
+- **Class B — Recoverable local execution deviation:** when an authorised operation produces an unexpected bounded effect, pause the affected operation, record the effect, restore or recreate the disposable workspace, verify the restored state and continue only within the original authority boundary.
+- **Class C — Expected local side effect:** permit expected caches, package metadata, virtual environments and generated output from authorised operations inside approved disposable paths; record where material and clean or recreate before final verification when required.
+
+A clean final state may be required evidence. The workspace does not need to remain continuously clean while explicitly approved commands run inside the disposable boundary.
+
+Escalate a Class B or C effect to Class A when it escapes the approved environment, changes remote or protected state, requires new intent or authority, cannot be confidently bounded, or cannot be safely restored. Do not use local recoverability to excuse unauthorised source changes.
+
 ## Stopping conditions
 
 Stop and record the blocker when:
@@ -217,7 +238,10 @@ Stop and record the blocker when:
 - credentials, private data or publication would be required without explicit authority;
 - the approved task becomes invalid or must be materially redefined;
 - required validation cannot establish correctness;
-- an unintended mutation occurs.
+- a Class A protected or unbounded mutation occurs;
+- a Class B effect cannot be bounded, restored or verified within the original authority boundary.
+
+Class B and Class C effects do not require a full stop when their approved recovery conditions are satisfied. Record them accurately in the plan and close-out where they are material.
 
 Stopping is a valid outcome. It preserves the evidence gate.
 

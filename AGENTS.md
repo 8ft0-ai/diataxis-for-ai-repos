@@ -52,6 +52,8 @@ agent/<issue-number>-short-description
 
 For each repository mutation, confirm the phase, exact target, intended side effect and forbidden side effects. Use a fuller check for pull requests, merges, workflows, settings, releases or any ambiguous operation.
 
+When an authorised command may affect a disposable local workspace, also record the effect boundary, existing authority, expected event class, expected local side effects, permitted generated paths and recovery action. One operation may produce several material events with different classes; record them separately.
+
 Implement the smallest coherent change that satisfies the issue. Do not combine unrelated cleanup, future-stage work or structural reorganisation.
 
 ## Evidence and documentation rules
@@ -86,6 +88,18 @@ Use exactly one recommendation:
 
 Evidence is not approval. Human approval and merge authority remain required unless the repository owner records a specific bounded delegation.
 
+## Mutation and recovery
+
+Use the full definitions in [`docs/issueops.md`](docs/issueops.md).
+
+- **Class A — Protected or unbounded mutation:** stop normal writes, perform only minimum safe remediation, record the event and require maintainer direction before resuming. Wrong remote objects, unauthorised repository operations, effects requiring new intent or authority, escaped effects and unclear or unrestorable changes are Class A.
+- **Class B — Recoverable local execution deviation:** pause the affected operation, inspect and record the bounded effect, restore or recreate the approved disposable workspace, verify the restored state and continue only within the existing authority boundary.
+- **Class C — Expected local side effect:** permit expected caches, packaging metadata, virtual environments and generated output inside approved disposable paths; record where material and clean or recreate before final verification when required.
+
+Escalate Class B or C to Class A when the effect escapes the approved disposable boundary, changes remote or protected state, requires new intent or authority, cannot be confidently bounded, or cannot be safely restored.
+
+Record separate events when one task produces more than one material class, such as expected Class C artefacts and a distinct Class B placement deviation.
+
 ## Stop conditions
 
 Stop and record the blocker when:
@@ -96,10 +110,11 @@ Stop and record the blocker when:
 - satisfying the request would violate a non-goal;
 - required validation is failing or cannot determine correctness;
 - a tool targets the wrong repository object;
-- an unintended mutation occurs;
+- a Class A protected or unbounded mutation occurs;
+- a Class B effect cannot be bounded, restored or verified inside the original authority boundary;
 - workflows, permissions, settings, publication or deployment would change without explicit authority.
 
-After an unintended mutation, perform only the minimum safe remediation, record the event, and await maintainer direction before resuming normal writes.
+Class B and Class C effects do not require maintainer reauthorisation when their approved recovery conditions are satisfied. Record them accurately where they are material to the evidence.
 
 ## Protected decisions
 
