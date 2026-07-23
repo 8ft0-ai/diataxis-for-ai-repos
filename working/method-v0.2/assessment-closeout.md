@@ -30,7 +30,7 @@ State the decision question this assessment is intended to answer.
 - **Credentials or secrets used:** none / describe explicit authority
 - **Prohibited operations confirmed:**
 
-### Target state and local side-effect evidence
+### Target state and local-effect evidence
 
 Record remote state, canonical source and disposable local effects separately. Do not collapse them into one clean or dirty result.
 
@@ -41,10 +41,18 @@ Record remote state, canonical source and disposable local effects separately. D
 - **Disposable workspace restored:** yes / no / not required — evidence
 - **Final working-tree or source-state check:**
 - **Target GitHub objects changed:** none / describe Class A incident and remediation
-- **Mutation or side-effect classification:** none / Class A / Class B / Class C
-- **Incident or deviation record:**
 
-A workspace may become temporarily dirty while approved commands run. Record expected Class C artefacts and recoverable Class B deviations accurately. A clean final state may still be required by the approved plan.
+A workspace may become temporarily dirty while authorised commands run. Record expected Class C artefacts and recoverable Class B deviations accurately. A clean final state may still be required by the approved plan.
+
+### Mutation and local-effect event register
+
+Record one row for each material event. One task or operation may produce several events with different classes. The event class describes the required response; the effect boundary describes where the effect occurred.
+
+| ID | Task or operation | Event class | Effect boundary | Observed effect | Evidence | Recovery or escalation | Final state |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| M1 |  | Class A / Class B / Class C | remote or protected / canonical tracked source / generated local |  |  |  |  |
+
+Use separate rows when one task produces expected Class C artefacts and a distinct Class B deviation. Class A events must also cite the incident record and maintainer decision required for resumption.
 
 ## 2. Evidence register
 
@@ -84,7 +92,7 @@ Copy this section once for each approved task.
 - **Expected documentation entry point:**
 - **Actual path followed:**
 - **Commands or interactions:**
-- **Local side effects and recovery:** none / Class B / Class C — evidence
+- **Mutation or local-effect events:** none / M1, M2
 - **Execution-evidence states:**
   - [ ] Source inspected
   - [ ] Command executed
