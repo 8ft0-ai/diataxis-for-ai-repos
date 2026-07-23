@@ -120,18 +120,25 @@ List the exact read, clone, install, build, test, runtime or fixture operations 
 
 List disposable environments, fixtures, caches or generated outputs that may be created and where they will live.
 
-### Local side-effect plan
+### Local effect plan
 
-Classify the effect and recovery boundary before running commands that may create local files.
+Record authority, effect boundary and expected event class separately before running commands that may create local files. Copy the fields for each materially distinct expected effect.
 
-- **Side-effect class:** protected / tracked source / generated local
+#### P1 — <planned effect>
+
+- **Related operation or task:**
+- **Effect boundary:** remote or protected / canonical tracked source / generated local
+- **Existing authority:** issue, decision or contract reference
+- **Expected event class:** none / Class C / other
 - **Expected local side effects:**
 - **Permitted generated paths:**
 - **Tracked files that must remain unchanged:**
 - **Recovery if observed:** stop and escalate / restore and continue / clean at close-out
 - **Conditions requiring escalation:**
 
-Use the [working method mutation classes](README.md#local-execution-effects-and-target-state). An expected Class C artefact becomes Class B when it appears outside the planned path but remains bounded and recoverable. Escalate to Class A when the effect escapes the disposable boundary, changes remote or protected state, cannot be confidently bounded, or cannot be safely restored.
+Use the [working method mutation classes](README.md#local-execution-effects-and-target-state). An expected Class C artefact becomes a separate Class B event when it appears outside the planned path but remains bounded and recoverable. Escalate to Class A when an effect reaches a remote or protected target, changes canonical source outside the contract, escapes the disposable boundary, requires new intent or authority, cannot be confidently bounded, or cannot be safely restored.
+
+One operation may produce several events with different classes. Plan distinct expected effects separately and record observed events separately in the close-out.
 
 ### Prohibited operations
 
@@ -229,6 +236,7 @@ In addition to the method-level stopping conditions, stop when:
 - the actual target interface materially differs from the approved evidence basis;
 - a task must be silently redefined to make it executable;
 - required validation cannot distinguish success from failure;
+- execution or recovery would require new intent or authority;
 - a Class A protected or unbounded mutation occurs;
 - a Class B effect cannot be confidently bounded, restored or verified inside the original authority boundary.
 
@@ -243,7 +251,7 @@ Record the blocker and request the exact decision needed when escalation is requ
 - **Target commit verified:** yes / no
 - **Task approval complete:** yes / no
 - **Execution boundary complete:** yes / no
-- **Local side-effect plan complete:** yes / no
+- **Local effect plan complete:** yes / no
 - **Review boundary complete:** yes / no
 - **Safe starting state recorded:** yes / no
 - **Decision:** Ready to execute / clarification required / blocked
