@@ -139,16 +139,20 @@ Expected side effect: <one intended mutation>
 Forbidden side effects: <what must not change>
 ```
 
-When an approved operation may create local files or alter a disposable workspace, also record:
+When an authorised operation may create local files or alter a disposable workspace, also record:
 
 ```text
-Side-effect class: protected / tracked source / generated local
+Effect boundary: remote or protected / canonical tracked source / generated local
+Existing authority: <issue, decision or contract that permits the operation>
+Expected event class: none / Class C / other
 Expected local side effects: <caches, metadata, build or test output>
 Permitted generated paths: <approved disposable locations>
 Recovery if observed: stop and escalate / restore and continue / clean at close-out
 ```
 
-The classification describes the effect and recovery boundary, not merely the command name. A normally expected artefact becomes more serious when it escapes the approved path, changes protected state or cannot be bounded.
+The effect boundary describes where a change occurs. The event class describes the required response. One operation may produce several effects with different event classes; record each material event separately rather than collapsing them into one classification.
+
+Classification depends on the observed effect, existing authority and recovery boundary, not merely the command name. A normally expected artefact becomes more serious when it escapes the approved path, changes protected state, requires new intent or authority, or cannot be bounded.
 
 A compact check is sufficient for routine, unambiguous file updates. Use the full check for:
 
@@ -164,7 +168,7 @@ A compact check is sufficient for routine, unambiguous file updates. Use the ful
 
 #### Class A — Protected or unbounded mutation
 
-Use Class A when a remote or protected object changes without authority, tracked source changes outside the contract, secrets or private data are exposed, or the impact cannot be confidently bounded or safely restored.
+Use Class A when a remote or protected object changes without authority, tracked source changes outside the contract, secrets or private data are exposed, the effect requires new intent or authority, or the impact cannot be confidently bounded or safely restored.
 
 Examples include:
 
@@ -173,6 +177,8 @@ Examples include:
 - changes to workflows, settings, permissions or branch protection without authority;
 - tracked source changes outside the approved scope;
 - effects that escape the approved disposable boundary;
+- bounded local effects caused by an operation that lacked existing authority;
+- effects that require new product intent, policy, architecture or authority;
 - effects whose impact is unclear or cannot be safely restored.
 
 Response:
@@ -184,7 +190,7 @@ Response:
 
 #### Class B — Recoverable local execution deviation
 
-Use Class B when an approved command creates an unexpected but bounded effect inside an approved disposable environment.
+Use Class B when an authorised operation creates an unexpected but bounded effect inside an approved disposable environment.
 
 Examples include:
 
@@ -202,11 +208,11 @@ Response:
 5. verify the restored state;
 6. continue without further maintainer approval only when the original authority boundary remains intact.
 
-Escalate to Class A when the effect escapes the disposable boundary, changes remote or protected state, cannot be confidently bounded, or cannot be safely restored.
+Escalate to Class A when the effect escapes the disposable boundary, changes remote or protected state, requires new intent or authority, cannot be confidently bounded, or cannot be safely restored.
 
 #### Class C — Expected local side effect
 
-Use Class C for expected generated artefacts inside approved disposable paths, including:
+Use Class C for expected generated artefacts from an authorised operation inside approved disposable paths, including:
 
 - virtual environments;
 - dependency caches;
@@ -216,6 +222,8 @@ Use Class C for expected generated artefacts inside approved disposable paths, i
 - build, test or generated output.
 
 Record Class C artefacts when they are material to the reader task or close-out. Clean or recreate the workspace before final verification when the contract requires a clean final state. Continuous cleanliness is not required while explicitly approved commands run inside the disposable boundary.
+
+One task or command may produce both expected Class C artefacts and a separate Class B deviation. Record these as separate events with their own effect boundary, evidence, recovery and final state.
 
 Do not hide an incident, silently normalise it after the fact or use local recoverability to excuse an unauthorised source or remote mutation.
 
@@ -372,6 +380,7 @@ Stop during implementation when:
 - a tool targets the wrong object;
 - a Class A protected or unbounded mutation occurs;
 - a Class B effect cannot be confidently bounded, restored or verified within the original authority boundary;
+- continuing would require new intent or authority;
 - a protected repository or publication operation is required.
 
 Class B and Class C effects do not require a full stop when the approved recovery conditions are satisfied. They must still be recorded accurately where material.
