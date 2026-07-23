@@ -139,6 +139,17 @@ Expected side effect: <one intended mutation>
 Forbidden side effects: <what must not change>
 ```
 
+When an approved operation may create local files or alter a disposable workspace, also record:
+
+```text
+Side-effect class: protected / tracked source / generated local
+Expected local side effects: <caches, metadata, build or test output>
+Permitted generated paths: <approved disposable locations>
+Recovery if observed: stop and escalate / restore and continue / clean at close-out
+```
+
+The classification describes the effect and recovery boundary, not merely the command name. A normally expected artefact becomes more serious when it escapes the approved path, changes protected state or cannot be bounded.
+
 A compact check is sufficient for routine, unambiguous file updates. Use the full check for:
 
 - pull-request creation and merge;
@@ -149,16 +160,64 @@ A compact check is sufficient for routine, unambiguous file updates. Use the ful
 - ambiguous targets;
 - operations after unexpected tool behaviour.
 
-### Circuit breaker
+### Mutation and recovery classes
 
-If an unintended mutation occurs:
+#### Class A — Protected or unbounded mutation
+
+Use Class A when a remote or protected object changes without authority, tracked source changes outside the contract, secrets or private data are exposed, or the impact cannot be confidently bounded or safely restored.
+
+Examples include:
+
+- targeting the wrong repository, issue, pull request, review or branch;
+- unauthorised push, merge, release, publication or deployment;
+- changes to workflows, settings, permissions or branch protection without authority;
+- tracked source changes outside the approved scope;
+- effects that escape the approved disposable boundary;
+- effects whose impact is unclear or cannot be safely restored.
+
+Response:
 
 1. stop normal write operations;
 2. perform only the minimum remediation required for safety;
 3. record the action, impact and remediation;
 4. require maintainer direction before resuming normal writes.
 
-Do not hide the event or silently absorb it into the implementation.
+#### Class B — Recoverable local execution deviation
+
+Use Class B when an approved command creates an unexpected but bounded effect inside an approved disposable environment.
+
+Examples include:
+
+- an installation command dirtying a disposable source snapshot unexpectedly;
+- build or test output appearing outside the preferred generated-output path but remaining inside the approved workspace;
+- a command failing after partial local setup;
+- local packaging metadata or caches appearing in an unplanned location without changing canonical source.
+
+Response:
+
+1. pause the affected operation;
+2. inspect and bound the effect;
+3. record the deviation and any evidence already produced;
+4. restore or recreate the disposable workspace;
+5. verify the restored state;
+6. continue without further maintainer approval only when the original authority boundary remains intact.
+
+Escalate to Class A when the effect escapes the disposable boundary, changes remote or protected state, cannot be confidently bounded, or cannot be safely restored.
+
+#### Class C — Expected local side effect
+
+Use Class C for expected generated artefacts inside approved disposable paths, including:
+
+- virtual environments;
+- dependency caches;
+- `__pycache__`;
+- `.pytest_cache`;
+- `*.egg-info` or equivalent packaging metadata;
+- build, test or generated output.
+
+Record Class C artefacts when they are material to the reader task or close-out. Clean or recreate the workspace before final verification when the contract requires a clean final state. Continuous cleanliness is not required while explicitly approved commands run inside the disposable boundary.
+
+Do not hide an incident, silently normalise it after the fact or use local recoverability to excuse an unauthorised source or remote mutation.
 
 ## Evidence and provenance
 
@@ -311,8 +370,11 @@ Stop during implementation when:
 - the contract becomes contradictory;
 - safe validation is impossible and correctness depends on it;
 - a tool targets the wrong object;
-- an unintended mutation occurs;
+- a Class A protected or unbounded mutation occurs;
+- a Class B effect cannot be confidently bounded, restored or verified within the original authority boundary;
 - a protected repository or publication operation is required.
+
+Class B and Class C effects do not require a full stop when the approved recovery conditions are satisfied. They must still be recorded accurately where material.
 
 Stop before merge when:
 
