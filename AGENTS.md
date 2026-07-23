@@ -52,7 +52,7 @@ agent/<issue-number>-short-description
 
 For each repository mutation, confirm the phase, exact target, intended side effect and forbidden side effects. Use a fuller check for pull requests, merges, workflows, settings, releases or any ambiguous operation.
 
-When an approved command may affect a disposable local workspace, also record the expected local side effects, permitted generated paths and recovery action. Classify the effect by its authority and recovery boundary rather than by the command name alone.
+When an authorised command may affect a disposable local workspace, also record the effect boundary, existing authority, expected event class, expected local side effects, permitted generated paths and recovery action. One operation may produce several material events with different classes; record them separately.
 
 Implement the smallest coherent change that satisfies the issue. Do not combine unrelated cleanup, future-stage work or structural reorganisation.
 
@@ -92,11 +92,13 @@ Evidence is not approval. Human approval and merge authority remain required unl
 
 Use the full definitions in [`docs/issueops.md`](docs/issueops.md).
 
-- **Class A — Protected or unbounded mutation:** stop normal writes, perform only minimum safe remediation, record the event and require maintainer direction before resuming. Wrong remote objects, unauthorised repository operations, escaped effects and unclear or unrestorable changes are Class A.
+- **Class A — Protected or unbounded mutation:** stop normal writes, perform only minimum safe remediation, record the event and require maintainer direction before resuming. Wrong remote objects, unauthorised repository operations, effects requiring new intent or authority, escaped effects and unclear or unrestorable changes are Class A.
 - **Class B — Recoverable local execution deviation:** pause the affected operation, inspect and record the bounded effect, restore or recreate the approved disposable workspace, verify the restored state and continue only within the existing authority boundary.
 - **Class C — Expected local side effect:** permit expected caches, packaging metadata, virtual environments and generated output inside approved disposable paths; record where material and clean or recreate before final verification when required.
 
-Escalate Class B or C to Class A when the effect escapes the approved disposable boundary, changes remote or protected state, cannot be confidently bounded, or cannot be safely restored.
+Escalate Class B or C to Class A when the effect escapes the approved disposable boundary, changes remote or protected state, requires new intent or authority, cannot be confidently bounded, or cannot be safely restored.
+
+Record separate events when one task produces more than one material class, such as expected Class C artefacts and a distinct Class B placement deviation.
 
 ## Stop conditions
 
