@@ -6,7 +6,7 @@ These instructions apply to repository-aware AI agents working in this repositor
 
 `diataxis-for-ai-repos` is developing an evidence-led method for AI-assisted repository documentation. **TaskFirstDocs** is a provisional name.
 
-The toolkit itself has not yet been implemented. Do not infer a complete product, architecture or roadmap from proposed files or issue discussions.
+The repository contains a minimal assessment-only V1 under [`toolkit/`](toolkit/README.md). It does not provide a complete product, documentation-drafting system, automation platform or broad roadmap.
 
 The stable branch is `main`.
 
