@@ -43,7 +43,7 @@ The idea may become relevant after earlier evidence gates are satisfied. It is n
 
 **State: Current capability**
 
-The [`v0.1.0` release](../releases/tag/v0.1.0) provides a minimal assessment-only toolkit. It helps a maintainer or repository-aware agent:
+The [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0) provides a minimal assessment-only toolkit. It helps a maintainer or repository-aware agent:
 
 - inspect repository evidence without changing the target repository;
 - identify evidence-supported reader groups;
@@ -245,7 +245,7 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Ran the executable files-to-prompt experiment and accepted an **Adapt** result.
 - Consolidated the accepted assessment method into the minimal toolkit.
 - Added a bootstrap guide for repositories with existing documentation.
-- Published the assessment-only [`v0.1.0` release](../releases/tag/v0.1.0).
+- Published the assessment-only [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0).
 
 ## Current commitments
 
