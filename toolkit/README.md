@@ -130,13 +130,14 @@ Humans retain responsibility for:
 
 ## Package map and reading order
 
-1. [`repository-assessment.md`](repository-assessment.md) — inspect a repository without mutation and propose the evidence-backed task set.
-2. [`reader-task-discovery.md`](reader-task-discovery.md) — decide which readers and tasks are representative enough to test.
-3. [`task-path-walkthrough.md`](task-path-walkthrough.md) — execute approved walkthroughs and record what actually happened.
-4. [`classification-and-remediation.md`](classification-and-remediation.md) — choose the smallest sufficient response and write bounded remediation items.
-5. [`evidence-and-validation.md`](evidence-and-validation.md) — apply claim states, provenance rules, retrieval labels, mutation boundaries and response-specific validation.
-6. [`assessment-closeout.md`](assessment-closeout.md) — record results, retained paths, limitations and next decisions.
-7. [`worked-example.md`](worked-example.md) — follow the files-to-prompt experiment as the primary worked example.
+1. [`bootstrap-existing-repository.md`](bootstrap-existing-repository.md) — start an assessment in another repository that already contains documentation, using a pinned toolkit commit and a copy-ready issue template.
+2. [`repository-assessment.md`](repository-assessment.md) — inspect a repository without mutation and propose the evidence-backed task set.
+3. [`reader-task-discovery.md`](reader-task-discovery.md) — decide which readers and tasks are representative enough to test.
+4. [`task-path-walkthrough.md`](task-path-walkthrough.md) — execute approved walkthroughs and record what actually happened.
+5. [`classification-and-remediation.md`](classification-and-remediation.md) — choose the smallest sufficient response and write bounded remediation items.
+6. [`evidence-and-validation.md`](evidence-and-validation.md) — apply claim states, provenance rules, retrieval labels, mutation boundaries and response-specific validation.
+7. [`assessment-closeout.md`](assessment-closeout.md) — record results, retained paths, limitations and next decisions.
+8. [`worked-example.md`](worked-example.md) — follow the files-to-prompt experiment as the primary worked example.
 
 The [working method v0.2](../working/method-v0.2/README.md) and the [RaceIQ](../experiments/raceiq/README.md) and [files-to-prompt](../experiments/files-to-prompt/method.md) experiments remain the provenance and research record behind this package.
 
