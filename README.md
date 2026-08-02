@@ -27,6 +27,12 @@ The package is based on two accepted small-repository experiments. It does not e
 
 The name **TaskFirstDocs** remains provisional until explicitly approved.
 
+## Project direction
+
+See the [project roadmap](docs/roadmap.md) for the current release boundary, the next evidence-gathering milestone, conditional drafting work and possible later tooling.
+
+The roadmap records direction. It does not authorise implementation; roadmap items still require the repository's normal GitHub planning, execution and human-approval process.
+
 ## Use the toolkit
 
 Start with the [assessment-only V1 overview](toolkit/README.md).
