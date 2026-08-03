@@ -114,7 +114,7 @@ Horizon 1 does not establish independent maintainer usability, broad portability
 
 ## Horizon 2 — bounded drafting and document-type validation
 
-**State: Candidate, gated by Horizon 1**
+**State: Candidate, gated by [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) and a successful bounded control rerun**
 
 The original project direction includes drafting contracts for tutorial, how-to, reference and explanation. These should not be added as a four-document generation matrix.
 
