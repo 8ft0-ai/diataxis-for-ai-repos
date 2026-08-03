@@ -62,7 +62,7 @@ Its evidence base is narrow: two small-repository experiments. It does not estab
 
 ## Horizon 1 — validate adoption of the released assessment workflow
 
-**State: Candidate**
+**State: Completed evidence gathering; adaptation committed in [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29)**
 
 ### Proposed milestone
 
@@ -100,6 +100,17 @@ Horizon 1 is complete when the project has enough evidence to decide whether to:
 - stop or defer expansion because the assessment method is not yet proportionate.
 
 A successful pilot does not require documentation changes. A useful assessment that retains existing documentation or creates no remediation work is valid evidence.
+
+### Recorded outcome
+
+Two fresh-context adoption pilots were completed:
+
+- [#27](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/27) assessed gitstate-lab and accepted `v0.1.0` substantially as tested, while authorising a materially different second pilot;
+- [#28](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/28) assessed arxiv-quant-radar and accepted an **Adapt** disposition.
+
+The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. [Issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) authorises that clarification-only maintenance release.
+
+Horizon 1 does not establish independent maintainer usability, broad portability or the target behaviours that remained blocked or not tested. A bounded rerun of the affected controls remains required before drafting-contract work begins.
 
 ## Horizon 2 — bounded drafting and document-type validation
 
@@ -249,16 +260,15 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 
 ## Current commitments
 
-There are no committed future capabilities in this roadmap at present.
+The only committed work is [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29): a clarification-only `v0.1.1` candidate covering the six findings accepted from the second adoption pilot.
 
-The immediate candidate is the Horizon 1 fresh-context adoption pilot. It requires a separate planning or execution issue before any target-repository work begins.
+This commitment does not authorise drafting contracts, automation, target-repository remediation, merge, release publication or the post-clarification rerun.
 
 ## Open decisions
 
-- Which materially different repository should be used for the first released-toolkit pilot?
-- What level of maintainer involvement is appropriate while preserving fresh context?
-- What evidence threshold would justify revising the toolkit versus running another pilot?
-- Should the first drafting experiment follow immediately from a real pilot finding, or be deferred until more assessment evidence exists?
+- Does the bounded post-clarification rerun confirm task-pack consistency, prerequisite preflight, blinded isolation and publication stopping?
+- What level of independent maintainer involvement is needed before claiming external usability?
+- Should the first drafting experiment follow a successful bounded rerun, or be deferred until more assessment evidence exists?
 - Which document type should receive the first drafting contract if evidence justifies one?
 - What form of independent review is proportionate?
 - When, if ever, does repeated manual work justify supporting tooling?
