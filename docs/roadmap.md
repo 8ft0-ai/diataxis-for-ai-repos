@@ -1,6 +1,6 @@
 # Project roadmap
 
-This roadmap records the direction of `diataxis-for-ai-repos` after the assessment-only `v0.1.0` release.
+This roadmap records the direction of `diataxis-for-ai-repos` after the clarification-only `v0.1.1` release.
 
 It is not an implementation plan and does not authorise repository changes. A roadmap entry becomes executable work only through the repository's normal GitHub planning and execution process.
 
@@ -39,26 +39,31 @@ The direction appears useful, but more evidence or a human decision is required 
 
 The idea may become relevant after earlier evidence gates are satisfied. It is not planned work, should not be estimated, and must not be implemented merely because it appears here.
 
-## Current release — assessment-only `v0.1.0`
+## Current release — assessment-only `v0.1.1`
 
 **State: Current capability**
 
-The [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0) provides a minimal assessment-only toolkit. It helps a maintainer or repository-aware agent:
+The [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.1) provides the minimal assessment-only toolkit from `v0.1.0` plus the six clarification controls implemented under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) and [PR #30](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/30). It helps a maintainer or repository-aware agent:
 
 - inspect repository evidence without changing the target repository;
 - identify evidence-supported reader groups;
 - propose representative tasks and stop for human approval;
+- check task-pack consistency and allocate incompatible tasks to separate contexts;
+- preflight exact prerequisites before approving executable tasks;
+- protect blinded tasks with explicit evidence allowlists and leakage checks;
+- establish a proportionate evidence budget before inspection;
 - walk or execute approved task paths;
 - distinguish observation, authority, inference and uncertainty;
 - classify observable failures and retained paths;
 - select the smallest sufficient response;
 - produce bounded remediation, retain, no-change and authority-required outcomes;
+- publish the authorised assessment record and stop further discovery;
 - close the assessment with limitations and next decisions;
 - bootstrap an assessment in a repository that already contains documentation.
 
 The release stops before documentation drafting. It does not provide a CLI, installer, hosted service, autonomous agent framework, automatic repository scanning or a complete drafting system.
 
-Its evidence base is narrow: two small-repository experiments. It does not establish independent agreement, large-repository proportionality, broad repository generality, drafting quality or model-to-model portability.
+The clarification controls have not yet passed the bounded post-release control rerun. The release therefore does not establish independent maintainer usability, large-repository proportionality, broad repository generality, drafting quality or model-to-model portability.
 
 ## Horizon 1 — validate adoption of the released assessment workflow
 
@@ -108,7 +113,7 @@ Two fresh-context adoption pilots were completed:
 - [#27](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/27) assessed gitstate-lab and accepted `v0.1.0` substantially as tested, while authorising a materially different second pilot;
 - [#28](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/28) assessed arxiv-quant-radar and accepted an **Adapt** disposition.
 
-The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. The clarification implemented under [issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) updates the assessment controls without authorising release publication or the bounded control rerun.
+The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. The clarification implemented under [issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) is published in `v0.1.1`; publication does not establish that the affected controls have passed the bounded rerun.
 
 Horizon 1 does not establish independent maintainer usability, broad portability or the target behaviours that remained blocked or not tested. A bounded rerun of the affected controls remains required before drafting-contract work begins.
 
@@ -258,12 +263,13 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Added a bootstrap guide for repositories with existing documentation.
 - Published the assessment-only [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0).
 - Ran two fresh-context adoption pilots, accepted an **Adapt** disposition and implemented the resulting clarification-only assessment controls under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29).
+- Published the clarification-only [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.1) without claiming that the bounded control rerun succeeded.
 
 ## Current commitments
 
-There are no committed future capabilities in this roadmap at present. The clarification implementation authorised by [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) is recorded under completed milestones because merging this change closes that issue.
+There are no committed future capabilities in this roadmap at present. The clarification controls are released, but the bounded post-clarification rerun remains an open human-authorised control test.
 
-Release publication and the bounded post-clarification rerun remain open human decisions. This roadmap does not authorise either action, drafting contracts, automation or target-repository remediation.
+The rerun does not authorise drafting contracts, automation or target-repository remediation. Drafting-contract experimentation remains gated by an independently reviewed rerun and a separate owner decision.
 
 ## Open decisions
 
