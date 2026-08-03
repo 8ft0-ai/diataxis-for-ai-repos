@@ -104,7 +104,7 @@ The issue should authorise inspection and task proposal only. It should not auth
 - branches or pull requests;
 - dependency installation or command execution before approval;
 - documentation drafting;
-- publication or deployment;
+- target-content publication or deployment, apart from the single bounded assessment-record comment explicitly authorised by the issue;
 - changes to workflows, settings or permissions.
 
 ### 3. Inspect existing documentation as evidence
@@ -171,10 +171,24 @@ Every task must include:
 - recognisable completion condition;
 - expected documentation entry point;
 - proposed retrieval and execution mode;
+- execution-context identity and required order;
+- permitted evidence allowlist and forbidden prior exposure where isolation matters;
+- executable-prerequisite preflight disposition;
 - execution boundary;
 - protected decisions and uncertainty.
 
 Do not select tasks merely to manufacture tutorial, how-to, reference and explanation outcomes.
+
+Before approval, check the proposed task pack as a whole:
+
+- identify which tasks may share a context and which require separate fresh contexts;
+- detect whether an earlier task exposes evidence that a later task forbids;
+- define task order only where that order preserves every starting context;
+- preflight the exact pinned source, runtime, dependencies, read-only credentials, network path and disposable workspace for executable tasks;
+- define an immutable evidence allowlist for blinded tasks and check metadata, timelines, links and broad retrieval results for outcome leakage;
+- revise, defer or remove tasks whose prerequisites or isolation cannot be established.
+
+A documented command is not, by itself, an executable fixture. Later quarantine cannot restore a blind after excluded outcome evidence has been exposed.
 
 ### 6. Stop for human task approval
 
@@ -186,9 +200,13 @@ A maintainer must approve or revise:
 - task set and priority;
 - starting contexts;
 - completion conditions;
+- task ordering and execution-context allocation;
+- evidence allowlists and forbidden prior exposure;
+- executable-task preflight dispositions;
 - permitted commands and network access;
 - disposable write locations;
 - credential boundary;
+- initial evidence budget and publication stop;
 - review boundary;
 - protected decisions.
 
@@ -274,7 +292,7 @@ Copy the template below into the repository being assessed. Replace all angle-br
 
 Assessment planning and execution boundary.
 
-This issue authorises a non-mutating documentation assessment. It does not authorise documentation changes, implementation branches, pull requests, publication or repository configuration changes.
+This issue authorises a non-mutating documentation assessment and one bounded write: posting the required first output as a comment to this issue. It does not authorise documentation changes, implementation branches, pull requests, target-content publication, deployment or repository configuration changes.
 
 ## Toolkit
 
@@ -368,7 +386,7 @@ Do not:
 - commit or push;
 - create additional target issues unless separately authorised;
 - change workflows, settings, permissions or branch protection;
-- publish or deploy;
+- publish target content, generate release artefacts or deploy; the sole authorised publication is the required assessment-record comment to this issue;
 - use credentials, secrets, private user files or production data;
 - install dependencies or execute commands before the task set and execution boundary are approved;
 - draft proposed documentation changes.
@@ -383,12 +401,16 @@ Post the following to this issue:
 4. protected decisions and unresolved uncertainty;
 5. proposed reader groups with evidence basis;
 6. proposed representative tasks;
-7. starting context and completion condition for each task;
-8. proposed execution boundary;
-9. representativeness and proportionality limitations;
-10. explicit human task-approval request.
+7. starting context, execution-context identity, order dependency and completion condition for each task;
+8. proposed evidence allowlist and forbidden prior exposure for any blinded task;
+9. executable-prerequisite preflight disposition for each executable task;
+10. proposed execution boundary;
+11. initial evidence budget and material exclusions;
+12. bounded assessment-record comment and publication stop condition;
+13. representativeness and proportionality limitations;
+14. explicit human task-approval request.
 
-Stop after posting that proposal.
+Once the required evidence has been collected, stop discovery, assemble this record and post it as the single authorised assessment-record comment to this issue within the stated bound. This does not authorise target-content publication or deployment. If the comment cannot be posted, preserve or return the prepared record and report a publication blocker. Do not resume open-ended inspection.
 
 ## Human approval gate
 
@@ -398,7 +420,11 @@ Do not execute walkthroughs until a maintainer records:
 - approved tasks and priority;
 - approved starting contexts;
 - approved completion conditions;
+- approved task ordering and execution-context allocation;
+- approved evidence allowlists and forbidden prior exposure;
+- executable-task preflight dispositions;
 - approved execution boundary;
+- approved evidence budget and publication stop;
 - approved review boundary;
 - protected decisions;
 - required changes.
@@ -418,7 +444,7 @@ The close-out should produce bounded remediation, retained paths, no-change deci
 
 Use a fresh agent context where practical. Supply the target repository, the assessment issue and the pinned toolkit commit, but not the private history of how this toolkit was developed.
 
-The first output should stop at the human task-approval gate. That provides direct evidence of whether the toolkit is understandable and usable without issue archaeology from this repository.
+Set a proportionate evidence budget before inspection begins. The first output should stop discovery once the required record is complete, post the bounded assessment-record comment authorised by the target issue, and then stop at the human task-approval gate. That provides direct evidence of whether the toolkit is understandable and usable without issue archaeology from this repository.
 
 ## Current evidence limits
 

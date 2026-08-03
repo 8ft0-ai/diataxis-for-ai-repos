@@ -39,6 +39,10 @@ Inspect repository evidence
 
 The gate between task proposal and task execution is mandatory. An agent may propose reader groups and tasks, but a maintainer must approve or revise the readers, tasks, starting contexts, completion conditions, priorities and execution boundary before walkthroughs begin.
 
+Before approval, check the task pack as a whole. Record task ordering and execution-context identity, preflight executable prerequisites, protect blinded fixtures with an immutable evidence allowlist, and set a proportionate evidence budget. Once the required initial record is complete, stop discovery and perform the bounded publication step; publication failure is a blocker, not permission to resume open-ended inspection.
+
+Use `Complete`, `Partial`, `Blocked` and `Not tested` as the primary task results. Keep source inspection, command execution, observed behaviour, clean-context completion, separate review and human validation as distinct evidence states.
+
 ## What the toolkit produces
 
 A proportionate assessment can produce:
@@ -143,10 +147,17 @@ The [working method v0.2](../working/method-v0.2/README.md) and the [RaceIQ](../
 
 ## Evidence base and current limitations
 
-The toolkit is based on two small-repository experiments:
+The assessment method was developed through two small-repository experiments:
 
 - RaceIQ, a static dashboard assessed primarily through source inspection;
 - files-to-prompt, a Python CLI assessed through source inspection, executable tasks and a separate same-account review, with disclosed retrieval limitations.
+
+The `v0.1.1` clarifications additionally draw on two fresh-context adoption pilots:
+
+- gitstate-lab, where the method produced a useful assessment but one executable task stopped at preflight;
+- arxiv-quant-radar, where the evidence gate worked but task-pack consistency, prerequisite availability, blinded isolation and publication proportionality required adaptation.
+
+These pilots were run by repository-aware agents with maintainer-operated approval gates. They do not establish independent maintainer usability.
 
 Across both experiments, the method produced corrections, navigation, retention, no-change and human-authority outcomes without requiring a complete documentation rewrite.
 

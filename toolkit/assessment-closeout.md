@@ -79,6 +79,10 @@ Complete the full record, including:
 - **Credentials or secrets used:** none / authority
 - **Disposable fixture and output locations:**
 - **Durable command/result record:**
+- **Initial evidence budget and use:**
+- **Material evidence excluded by the budget:**
+- **Publication result:** complete / blocked — evidence
+- **Publication intervention required:** none / describe
 - **Material limitations:**
 
 ### Evidence register
@@ -110,6 +114,10 @@ Use **Not applicable — no material local or remote effect** when the assessmen
 - **Approved reader groups:**
 - **Approved task set:**
 - **Approval record:**
+- **Task-pack consistency disposition:**
+- **Execution-context and ordering allocation:**
+- **Executable-task preflight dispositions:**
+- **Blinded evidence allowlists and leakage checks:**
 - **Material deviations:** none / discovery and authority
 
 For Level 1, state the affected reader need instead of inventing a task set.
@@ -148,10 +156,13 @@ Record only observable task failures, correctness problems, authority gaps or ma
 
 - Affected reader and task:
 - Expected path or claim:
-- Observed condition:
+- Directly observed condition:
+- Governing authority:
+- Judgement or inference against that authority:
+- Uncertainty:
 - Completion gap or risk:
 - Evidence:
-- Claim state:
+- Claim state for each material statement:
 - Why action may be justified:
 - Protected decisions:
 ```
@@ -247,6 +258,7 @@ Examples:
 - **Reader groups:** Accept / Revise / Reject / Not reviewed
 - **Tasks:** Accept / Revise / Reject / Not reviewed
 - **Evidence states:** Accept / Revise / Reject / Not reviewed
+- **Observation-versus-judgement attribution:** Accept / Revise / Reject / Not reviewed
 - **Findings and classifications:** Accept / Revise / Reject / Not reviewed
 - **Usefulness and proportionality:** Accept / Revise / Reject / Not reviewed
 
@@ -260,6 +272,8 @@ For Level 2 and Level 3, answer:
 - Did the evidence gate prevent unsupported drafting?
 - Did the assessment retain useful material and permit no change?
 - Was the chosen adoption level proportionate?
+- Did the evidence budget and publication stop avoid open-ended inspection?
+- Which orchestration interventions were needed beyond planned human gates?
 - Which fields materially supported the decision?
 - Which fields could be omitted next time?
 

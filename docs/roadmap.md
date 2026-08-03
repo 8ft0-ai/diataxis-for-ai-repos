@@ -62,7 +62,7 @@ Its evidence base is narrow: two small-repository experiments. It does not estab
 
 ## Horizon 1 — validate adoption of the released assessment workflow
 
-**State: Candidate**
+**State: Completed; clarification implemented under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29), with a bounded control rerun pending decision**
 
 ### Proposed milestone
 
@@ -101,9 +101,20 @@ Horizon 1 is complete when the project has enough evidence to decide whether to:
 
 A successful pilot does not require documentation changes. A useful assessment that retains existing documentation or creates no remediation work is valid evidence.
 
+### Recorded outcome
+
+Two fresh-context adoption pilots were completed:
+
+- [#27](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/27) assessed gitstate-lab and accepted `v0.1.0` substantially as tested, while authorising a materially different second pilot;
+- [#28](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/28) assessed arxiv-quant-radar and accepted an **Adapt** disposition.
+
+The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. The clarification implemented under [issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) updates the assessment controls without authorising release publication or the bounded control rerun.
+
+Horizon 1 does not establish independent maintainer usability, broad portability or the target behaviours that remained blocked or not tested. A bounded rerun of the affected controls remains required before drafting-contract work begins.
+
 ## Horizon 2 — bounded drafting and document-type validation
 
-**State: Candidate, gated by Horizon 1**
+**State: Candidate, gated by a successful bounded control rerun and a separate authorising decision**
 
 The original project direction includes drafting contracts for tutorial, how-to, reference and explanation. These should not be added as a four-document generation matrix.
 
@@ -246,19 +257,19 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Consolidated the accepted assessment method into the minimal toolkit.
 - Added a bootstrap guide for repositories with existing documentation.
 - Published the assessment-only [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0).
+- Ran two fresh-context adoption pilots, accepted an **Adapt** disposition and implemented the resulting clarification-only assessment controls under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29).
 
 ## Current commitments
 
-There are no committed future capabilities in this roadmap at present.
+There are no committed future capabilities in this roadmap at present. The clarification implementation authorised by [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) is recorded under completed milestones because merging this change closes that issue.
 
-The immediate candidate is the Horizon 1 fresh-context adoption pilot. It requires a separate planning or execution issue before any target-repository work begins.
+Release publication and the bounded post-clarification rerun remain open human decisions. This roadmap does not authorise either action, drafting contracts, automation or target-repository remediation.
 
 ## Open decisions
 
-- Which materially different repository should be used for the first released-toolkit pilot?
-- What level of maintainer involvement is appropriate while preserving fresh context?
-- What evidence threshold would justify revising the toolkit versus running another pilot?
-- Should the first drafting experiment follow immediately from a real pilot finding, or be deferred until more assessment evidence exists?
+- Does the bounded post-clarification rerun confirm task-pack consistency, prerequisite preflight, blinded isolation and publication stopping?
+- What level of independent maintainer involvement is needed before claiming external usability?
+- Should the first drafting experiment follow a successful bounded rerun, or be deferred until more assessment evidence exists?
 - Which document type should receive the first drafting contract if evidence justifies one?
 - What form of independent review is proportionate?
 - When, if ever, does repeated manual work justify supporting tooling?

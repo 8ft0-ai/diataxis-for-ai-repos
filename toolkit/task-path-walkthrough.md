@@ -13,12 +13,17 @@ Before starting each task, copy the approved fields without silently changing th
 - starting context;
 - completion condition;
 - expected documentation entry point;
+- execution-context identity and required order;
+- permitted evidence allowlist and forbidden prior exposure;
+- executable-prerequisite preflight disposition;
 - permitted operations;
 - prohibited operations;
 - review boundary;
 - protected decisions.
 
 If the task must be materially redefined, stop and request approval.
+
+Do not begin an executable task whose approved preflight is missing or failed. Do not begin a blinded task if the current context has already seen forbidden evidence. Stop and record the invalid condition; changing order or pretending to forget requires new authority.
 
 ## 2. Record the evidence environment
 
@@ -134,7 +139,7 @@ Use one primary result:
 - **Blocked** — the task could not safely proceed because evidence, authority, prerequisites or access were missing.
 - **Not tested** — required behaviour was not executed or observed.
 
-The result does not predetermine the documentation response. A complete task may justify retention. A blocked task may require human authority rather than a guide.
+The result does not predetermine the documentation response. A complete task may justify retention. A blocked task may require human authority rather than a guide. Use `Not tested` when required behaviour did not run; use `Blocked` when the approved task could not safely begin or continue. Record both only when they describe different aspects, with one primary result.
 
 ## 8. Describe observable friction
 
@@ -188,7 +193,18 @@ Copy this record for each approved task.
 - Limitations:
 ```
 
-## 10. Separate evidence review
+## 10. Finish and publish the task record
+
+Once the approved task evidence and required limitations are recorded:
+
+1. stop discovery and additional repository inspection;
+2. assemble the compact task record;
+3. attempt the authorised durable publication within the approved interaction or time bound;
+4. stop after successful publication.
+
+If publication cannot complete, preserve or return the prepared record and report a publication blocker. Do not resume evidence collection merely because publication is stalled.
+
+## 11. Separate evidence review
 
 A separate review should receive the final task records and cited evidence.
 
