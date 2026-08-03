@@ -21,22 +21,30 @@ Authority and evidence
 
 Mutation boundary
 
-1. Do not edit, commit, push, fork, publish or change settings in the target repository.
+1. Do not edit, commit, push, fork, publish target content, deploy or change settings in the target repository.
 2. Do not create target issues, discussions or pull requests.
 3. Do not run commands, install dependencies or create local fixtures unless a later approved execution boundary permits them.
 4. Do not use credentials, secrets, private user files or production data.
 5. Do not draft proposed documentation changes during this assessment phase.
+6. The only permitted write is the explicitly authorised, bounded assessment-record comment at the existing durable record. If no such write is authorised, return the prepared record and report the blocker.
+
+Initial controls
+
+1. Before inventory or analysis, set a proportionate evidence budget for required toolkit files, target documentation and authority surfaces, mutable live objects, elapsed time or interactions where useful, and material exclusions.
+2. Identify the existing durable record and the bounded assessment-record comment that is authorised there.
+3. Stop discovery when the required output is supported; do not consume the remaining budget merely because it is available.
 
 Assessment work
 
-1. Inventory the documentation entry points and other material authority surfaces.
+1. Within the initial evidence budget, inventory the documentation entry points and other material authority surfaces.
 2. Identify direct contradictions, stale claims and unresolved authority gaps.
 3. Propose only reader groups supported by observable interfaces and documentation paths.
 4. Propose a small, proportionate set of representative reader tasks.
-5. Give every task a starting context, recognisable completion condition, expected documentation entry point and reason it is material.
-6. Propose the execution and safety boundary needed to test each task.
-7. Identify protected decisions that require human authority.
-8. State where fewer tasks, fewer readers or no further assessment may be appropriate.
+5. Give every task a starting context, recognisable completion condition, expected documentation entry point, execution-context identity, order dependency, evidence allowlist, forbidden prior exposure, executable-prerequisite preflight disposition and reason it is material.
+6. Check the proposed task pack as a whole for context or ordering conflicts, unavailable execution prerequisites and blinded-evidence leakage. Revise, defer or remove invalid tasks before requesting approval.
+7. Propose the execution and safety boundary needed to test each task.
+8. Identify protected decisions that require human authority.
+9. State where fewer tasks, fewer readers or no further assessment may be appropriate.
 
 Do not select tasks merely to manufacture tutorial, how-to, reference and explanation outcomes. Do not create work because a category or directory is empty.
 
@@ -48,12 +56,12 @@ C. Authority map
 D. Contradictions and stale claims
 E. Protected decisions and unresolved uncertainty
 F. Proposed reader groups with evidence basis
-G. Proposed representative tasks with starting contexts and completion conditions
+G. Proposed representative tasks with starting contexts, completion conditions, execution-context allocation, ordering, evidence allowlists and prerequisite preflight dispositions
 H. Proposed execution boundary and prohibited operations
-I. Representativeness and evidence limitations
+I. Whole-pack consistency disposition, initial evidence budget, material exclusions, bounded assessment-record publication step, representativeness and evidence limitations
 J. Human approval request
 
-Stop after section J. Do not begin walkthrough execution until a maintainer approves or revises the reader groups, tasks, priorities, starting contexts, completion conditions, execution boundary and review boundary.
+Once the required evidence is collected, stop discovery and attempt only the authorised assessment-record comment within its stated bound. If that write fails, preserve or return the prepared record and report a publication blocker. Stop after section J. Do not begin walkthrough execution until a maintainer approves or revises the reader groups, tasks, priorities, starting contexts, completion conditions, task-pack controls, evidence budget, publication stop, execution boundary and review boundary.
 ```
 
 ## Required assessment record
@@ -180,6 +188,7 @@ For blinded tasks, define immutable evidence objects and check whether commit ti
 
 State:
 
+- the whole-pack consistency disposition;
 - what repository types, readers or environments this assessment does not represent;
 - which proposed tasks rely only on source inspection;
 - which claims require execution or human knowledge;
@@ -194,7 +203,7 @@ Set and report an initial evidence budget covering:
 - elapsed time or interactions where they provide a useful bound;
 - material evidence excluded by the budget.
 
-The budget limits exploration, not the claims required for a finding. Once the required assessment record is complete, stop discovery and perform the bounded publication step. If publication fails, preserve or return the prepared record and report the blocker rather than continuing to inspect.
+The budget limits exploration, not the claims required for a finding. Once the required assessment record is complete, stop discovery and perform only the authorised bounded assessment-record write. This write records the assessment in the existing durable record; it does not authorise target-content publication or deployment. If the write fails, preserve or return the prepared record and report the blocker rather than continuing to inspect.
 
 ### J. Human task-approval gate
 
