@@ -146,7 +146,12 @@ Each task must describe an outcome, not a Diátaxis category.
 - **Starting context:**
 - **Completion condition:**
 - **Expected documentation entry point:**
+- **Execution-context identity:** shared / separate fresh context / named context
+- **Order dependency:** none / before or after named task
+- **Permitted evidence allowlist:**
+- **Forbidden prior exposure:**
 - **Expected evidence states:** source inspected / command executed / behaviour observed / clean-context completed / not tested
+- **Executable-prerequisite preflight:** pass / fail / not required — evidence
 - **Protected decisions:**
 
 Prefer a small set of materially distinct tasks. A task is not representative merely because it is easy to execute.
@@ -167,6 +172,10 @@ Record the operations required to test the proposed tasks.
 
 If no execution is needed, say so rather than inventing a command path.
 
+Before proposing an executable task for approval, verify the exact pinned checkout or immutable source, runtime, dependencies, read-only credential boundary, authorised network path, disposable workspace, permitted side effects and recovery boundary. A failed preflight requires task revision, deferral or an explicit source-inspection-only proposal.
+
+For blinded tasks, define immutable evidence objects and check whether commit titles, timelines, linked issues, broad comment retrieval or the current target state reveal the excluded outcome. If isolation cannot be established, revise the fixture or label the task non-blind before approval.
+
 ### I. Limitations and proportionality
 
 State:
@@ -176,6 +185,16 @@ State:
 - which claims require execution or human knowledge;
 - whether Level 1, Level 2 or Level 3 is proportionate;
 - whether a smaller assessment or no further work is justified.
+
+Set and report an initial evidence budget covering:
+
+- toolkit files required by the selected path;
+- target documentation and authority surfaces;
+- mutable live objects;
+- elapsed time or interactions where they provide a useful bound;
+- material evidence excluded by the budget.
+
+The budget limits exploration, not the claims required for a finding. Once the required assessment record is complete, stop discovery and perform the bounded publication step. If publication fails, preserve or return the prepared record and report the blocker rather than continuing to inspect.
 
 ### J. Human task-approval gate
 
@@ -187,7 +206,11 @@ Decision: Approved / Approved with changes / Rejected
 Approved reader groups:
 Approved tasks and priority:
 Approved starting contexts and completion conditions:
+Approved task ordering and execution-context allocation:
+Approved evidence allowlists and forbidden prior exposure:
+Executable-task preflight dispositions:
 Approved execution boundary:
+Approved evidence budget and publication stop:
 Approved review boundary:
 Protected decisions:
 Required changes:
