@@ -197,8 +197,13 @@ Stop when:
 - Starting context:
 - Completion condition:
 - Expected documentation entry point:
+- Execution-context identity:
+- Order dependency:
+- Permitted evidence allowlist:
+- Forbidden prior exposure:
 - Expected execution-evidence states:
 - Required environment or dependencies:
+- Executable-prerequisite preflight: pass / fail / not required — evidence
 - Proposed retrieval and execution mode:
 - Proposed execution boundary:
 - Protected decisions and uncertainty:
@@ -216,6 +221,10 @@ Check:
 - Are tasks materially different?
 - Does the set avoid predetermining a Diátaxis form?
 - Could one task or reader be removed without reducing decision value?
+- Would completing one task expose evidence forbidden by another?
+- Are separate fresh contexts, fixture changes or ordering changes required?
+- Have executable prerequisites been preflighted rather than inferred from a documented command?
+- Do blinded tasks have an immutable evidence allowlist and a metadata-leak check?
 - Are unsafe or authority-dependent tasks marked for stopping?
 - Is the adoption level proportionate?
 
@@ -233,7 +242,11 @@ Approved reader groups:
 Approved tasks and priority:
 Approved starting contexts:
 Approved completion conditions:
+Approved task ordering and execution-context allocation:
+Approved evidence allowlists and forbidden prior exposure:
+Executable-task preflight dispositions:
 Approved execution boundary:
+Approved evidence budget and publication stop:
 Approved review boundary:
 Protected decisions:
 Required changes:
