@@ -54,6 +54,7 @@ The [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases
 - establish a proportionate evidence budget before inspection;
 - walk or execute approved task paths;
 - distinguish observation, authority, inference and uncertainty;
+- use `Complete`, `Partial`, `Blocked` and `Not tested` as primary task results, keep execution and evidence states separate, and distinguish direct observations from judgements against named authority;
 - classify observable failures and retained paths;
 - select the smallest sufficient response;
 - produce bounded remediation, retain, no-change and authority-required outcomes;
@@ -267,9 +268,9 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 
 ## Current commitments
 
-There are no committed future capabilities in this roadmap at present. The clarification controls are released, but the bounded post-clarification rerun remains an open human-authorised control test.
+There are no committed future capabilities in this roadmap at present. The clarification controls are released, but the bounded post-clarification rerun remains pending a separate owner decision.
 
-The rerun does not authorise drafting contracts, automation or target-repository remediation. Drafting-contract experimentation remains gated by an independently reviewed rerun and a separate owner decision.
+If authorised, the rerun will not authorise drafting contracts, automation or target-repository remediation. Drafting-contract experimentation remains gated by an independently reviewed rerun and a separate owner decision.
 
 ## Open decisions
 
