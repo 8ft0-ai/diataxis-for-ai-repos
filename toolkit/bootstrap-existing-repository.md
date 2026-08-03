@@ -104,7 +104,7 @@ The issue should authorise inspection and task proposal only. It should not auth
 - branches or pull requests;
 - dependency installation or command execution before approval;
 - documentation drafting;
-- publication or deployment;
+- target-content publication or deployment, apart from the single bounded assessment-record comment explicitly authorised by the issue;
 - changes to workflows, settings or permissions.
 
 ### 3. Inspect existing documentation as evidence
@@ -292,7 +292,7 @@ Copy the template below into the repository being assessed. Replace all angle-br
 
 Assessment planning and execution boundary.
 
-This issue authorises a non-mutating documentation assessment. It does not authorise documentation changes, implementation branches, pull requests, publication or repository configuration changes.
+This issue authorises a non-mutating documentation assessment and one bounded write: posting the required first output as a comment to this issue. It does not authorise documentation changes, implementation branches, pull requests, target-content publication, deployment or repository configuration changes.
 
 ## Toolkit
 
@@ -386,7 +386,7 @@ Do not:
 - commit or push;
 - create additional target issues unless separately authorised;
 - change workflows, settings, permissions or branch protection;
-- publish or deploy;
+- publish target content, generate release artefacts or deploy; the sole authorised publication is the required assessment-record comment to this issue;
 - use credentials, secrets, private user files or production data;
 - install dependencies or execute commands before the task set and execution boundary are approved;
 - draft proposed documentation changes.
@@ -406,11 +406,11 @@ Post the following to this issue:
 9. executable-prerequisite preflight disposition for each executable task;
 10. proposed execution boundary;
 11. initial evidence budget and material exclusions;
-12. bounded publication step and stop condition;
+12. bounded assessment-record comment and publication stop condition;
 13. representativeness and proportionality limitations;
 14. explicit human task-approval request.
 
-Once the required evidence has been collected, stop discovery, assemble this record and attempt the authorised publication within the stated bound. If publication cannot complete, preserve or return the prepared record and report a publication blocker. Do not resume open-ended inspection.
+Once the required evidence has been collected, stop discovery, assemble this record and post it as the single authorised assessment-record comment to this issue within the stated bound. This does not authorise target-content publication or deployment. If the comment cannot be posted, preserve or return the prepared record and report a publication blocker. Do not resume open-ended inspection.
 
 ## Human approval gate
 
@@ -444,7 +444,7 @@ The close-out should produce bounded remediation, retained paths, no-change deci
 
 Use a fresh agent context where practical. Supply the target repository, the assessment issue and the pinned toolkit commit, but not the private history of how this toolkit was developed.
 
-Set a proportionate evidence budget before inspection begins. The first output should stop discovery once the required record is complete, perform the bounded publication step, and then stop at the human task-approval gate. That provides direct evidence of whether the toolkit is understandable and usable without issue archaeology from this repository.
+Set a proportionate evidence budget before inspection begins. The first output should stop discovery once the required record is complete, post the bounded assessment-record comment authorised by the target issue, and then stop at the human task-approval gate. That provides direct evidence of whether the toolkit is understandable and usable without issue archaeology from this repository.
 
 ## Current evidence limits
 
