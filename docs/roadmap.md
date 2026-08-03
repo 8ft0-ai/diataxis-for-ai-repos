@@ -62,7 +62,7 @@ Its evidence base is narrow: two small-repository experiments. It does not estab
 
 ## Horizon 1 — validate adoption of the released assessment workflow
 
-**State: Completed evidence gathering; adaptation committed in [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29)**
+**State: Completed; clarification implemented under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29), with a bounded control rerun pending decision**
 
 ### Proposed milestone
 
@@ -108,13 +108,13 @@ Two fresh-context adoption pilots were completed:
 - [#27](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/27) assessed gitstate-lab and accepted `v0.1.0` substantially as tested, while authorising a materially different second pilot;
 - [#28](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/28) assessed arxiv-quant-radar and accepted an **Adapt** disposition.
 
-The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. [Issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) authorises that clarification-only maintenance release.
+The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. The clarification implemented under [issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) updates the assessment controls without authorising release publication or the bounded control rerun.
 
 Horizon 1 does not establish independent maintainer usability, broad portability or the target behaviours that remained blocked or not tested. A bounded rerun of the affected controls remains required before drafting-contract work begins.
 
 ## Horizon 2 — bounded drafting and document-type validation
 
-**State: Candidate, gated by [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) and a successful bounded control rerun**
+**State: Candidate, gated by a successful bounded control rerun and a separate authorising decision**
 
 The original project direction includes drafting contracts for tutorial, how-to, reference and explanation. These should not be added as a four-document generation matrix.
 
@@ -257,12 +257,13 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Consolidated the accepted assessment method into the minimal toolkit.
 - Added a bootstrap guide for repositories with existing documentation.
 - Published the assessment-only [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0).
+- Ran two fresh-context adoption pilots, accepted an **Adapt** disposition and implemented the resulting clarification-only assessment controls under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29).
 
 ## Current commitments
 
-The only committed work is [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29): a clarification-only `v0.1.1` candidate covering the six findings accepted from the second adoption pilot.
+There are no committed future capabilities in this roadmap at present. The clarification implementation authorised by [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) is recorded under completed milestones because merging this change closes that issue.
 
-This commitment does not authorise drafting contracts, automation, target-repository remediation, merge, release publication or the post-clarification rerun.
+Release publication and the bounded post-clarification rerun remain open human decisions. This roadmap does not authorise either action, drafting contracts, automation or target-repository remediation.
 
 ## Open decisions
 
