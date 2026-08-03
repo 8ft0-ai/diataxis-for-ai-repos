@@ -49,6 +49,18 @@ Examples:
 
 Uncertainty should remain visible until an authorised source resolves it.
 
+### Observation and judgement against authority
+
+Keep the directly visible condition separate from the conclusion drawn against a quality gate, policy or acceptance criterion.
+
+For example:
+
+- **Observation:** 95 of 114 recorded rationales use one of two repeated strings.
+- **Authority:** the approved quality gate requires paper-specific rationales.
+- **Inference or judgement:** the repeated rationales are not sufficiently paper-specific to satisfy that gate.
+
+Cite the governing authority for the judgement. Do not present the judgement as though it were the observed condition, and do not treat a reviewer decision as historical project intent.
+
 ## 2. Execution-evidence states
 
 These states describe what was actually done. Several may apply to one task.
@@ -129,6 +141,30 @@ Never describe a non-byte-identical transcription as the pinned implementation.
 Use when authoritative material or execution could not be obtained.
 
 State the blocker and the claims that remain unsupported.
+
+### Blinded evidence isolation
+
+Before approving a blinded task:
+
+1. define an explicit allowlist of immutable evidence objects;
+2. identify outcome evidence that must remain excluded;
+3. check commit titles and messages, issue and pull-request timelines, linked objects, broad comment retrieval and the current target state for leakage;
+4. use a target state that predates the excluded outcome where the task depends on discovering an earlier defect;
+5. allocate a separate fresh execution context when another task would expose excluded evidence.
+
+If excluded outcome evidence is exposed, the blind is invalid. Quarantining the evidence may preserve other claims, but it cannot restore clean-context completion.
+
+### Executable-task preflight
+
+Before approval, verify:
+
+- the exact pinned checkout or immutable source can be acquired;
+- required runtimes, tools and dependency resolution are available;
+- credentials are read-only and within the authorised boundary;
+- the required network path is available;
+- the disposable workspace, permitted side effects and recovery action are defined.
+
+A documented command is not an executable fixture. Record preflight as `Pass`, `Fail` or `Not required`. A failed preflight requires revision, deferral or an explicitly approved source-inspection-only task.
 
 ## 4. Retrieval modes are not equivalent
 
@@ -296,7 +332,10 @@ Do not force every minor statement into the register. Include the evidence neede
 Before close-out or review, ask:
 
 - Does every material claim have an accurate claim state?
+- Are direct observations separated from judgements or inferences against a named authority?
 - Do execution-evidence states describe what actually happened?
+- Did every executable task have a recorded preflight disposition?
+- Did every blinded task preserve its evidence allowlist and leakage boundary?
 - Are retrieval modes explicit and non-equivalent?
 - Are resolved dependency and runtime versions recorded?
 - Are material command results durable?
