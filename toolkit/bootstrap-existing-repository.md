@@ -429,12 +429,11 @@ Post the following to this issue:
 8. starting context, execution-context identity, order dependency and completion condition for each task;
 9. proposed evidence allowlist, forbidden prior exposure and freshness boundary for any task requiring isolation;
 10. executable-prerequisite preflight disposition for each executable task;
-11. publication/write-path capability preflight disposition for any later task whose completion requires a durable write;
-12. proposed execution boundary;
-13. initial evidence budget and material exclusions;
-14. bounded assessment-record comment and publication stop condition;
-15. representativeness and proportionality limitations;
-16. explicit human task-approval request.
+11. proposed execution boundary;
+12. initial evidence budget and material exclusions;
+13. bounded assessment-record comment and publication stop condition;
+14. representativeness and proportionality limitations;
+15. explicit human task-approval request.
 
 Once the required evidence has been collected, stop discovery, assemble this record and post it as the single authorised assessment-record comment to this issue within the stated bound. This does not authorise target-content publication or deployment. If a previously passed comment write path becomes unavailable at publication time, preserve or return the prepared record and report a publication blocker. Do not resume open-ended inspection.
 
@@ -450,7 +449,7 @@ Do not execute walkthroughs until a maintainer records:
 - approved evidence allowlists and forbidden prior exposure;
 - approved freshness or prior-information boundaries;
 - executable-task preflight dispositions;
-- publication/write-path capability preflight dispositions;
+- publication/write-path capability preflight dispositions for approved tasks that require durable publication;
 - approved execution boundary;
 - approved evidence budget and publication stop;
 - approved review boundary;
