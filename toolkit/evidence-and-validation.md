@@ -61,21 +61,27 @@ For example:
 
 Cite the governing authority for the judgement. Do not present the judgement as though it were the observed condition, and do not treat a reviewer decision as historical project intent.
 
-## 2. Execution-evidence states
+## 2. Primary task results and execution-evidence states
 
-These states describe what was actually done. Several may apply to one task.
+Every approved task has exactly one primary result:
 
-| State | Meaning |
+- **Complete** — the approved completion condition was reached;
+- **Partial** — the path produced material progress but did not reach the completion condition;
+- **Blocked** — the task could not safely begin or continue because a prerequisite, evidence, authority or access boundary was missing;
+- **Not tested** — the approved task depended on behaviour that was not executed or observed, so the task completion contract remains untested.
+
+Keep the primary result separate from execution evidence. Record subordinate evidence explicitly as yes/no rather than reusing a primary-result term:
+
+| Evidence state | Meaning |
 | --- | --- |
-| Source inspected | Repository source, documentation, configuration or tests were examined. |
-| Command executed | A named command was run in the recorded environment. |
-| Behaviour observed | Runtime output or behaviour was directly observed. |
-| Clean-context completed | The approved reader reached the completion condition from the approved unfamiliar starting context. |
-| Separately reviewed | Another review pass checked evidence or repeated part of the task. |
-| Human validated | A human independently accepted or reproduced the result. |
-| Not tested | The relevant execution or behaviour was not tested. |
+| Source inspected: yes / no | Whether repository source, documentation, configuration or tests were examined. |
+| Command executed: yes / no | Whether a named command was run in the recorded environment. |
+| Behaviour observed: yes / no | Whether runtime output or behaviour was directly observed. |
+| Clean-context completed: yes / no | Whether the approved reader reached the completion condition from the approved unfamiliar or isolated starting context. |
+| Separately reviewed: yes / no | Whether another review pass checked evidence or repeated part of the task. |
+| Human validated: yes / no | Whether a human independently accepted or reproduced the result. |
 
-A command can execute without completing the reader task. Source inspection does not establish runtime behaviour. A same-agent fresh pass is not human validation.
+A command can execute without completing the reader task. Source inspection does not establish runtime behaviour. A same-agent fresh pass is not human validation. `Not tested` is reserved for the primary task-result vocabulary; do not use it as a subordinate checkbox alongside a different primary result.
 
 ## 3. Retrieval and execution modes
 
@@ -136,11 +142,11 @@ Record:
 
 Never describe a non-byte-identical transcription as the pinned implementation.
 
-### Not tested or not retrieved
+### Not retrieved
 
-Use when authoritative material or execution could not be obtained.
+Use when required authoritative material could not be obtained.
 
-State the blocker and the claims that remain unsupported.
+State the blocker and the claims that remain unsupported. This is a retrieval observation, not a primary task result.
 
 ### Blinded evidence isolation
 
@@ -154,6 +160,21 @@ Before approving a blinded task:
 
 If excluded outcome evidence is exposed, the blind is invalid. Quarantining the evidence may preserve other claims, but it cannot restore clean-context completion.
 
+### Freshness and zero-history are execution properties
+
+Define a fresh, clean-context or zero-history requirement by the information boundary the task actually needs, not by a named chat mode, browser feature or other UI mechanism.
+
+Before evidence inspection, record:
+
+- the material information available to the execution context before the task invocation;
+- the task's forbidden prior exposure;
+- the authorised instructions, fixture identities, allowlists or control capsules supplied as part of the invocation;
+- whether the current context can credibly satisfy the required boundary.
+
+Authorised task inputs supplied at invocation do not by themselves invalidate freshness unless the task contract says that they disclose excluded evidence. A product feature such as a temporary or isolated chat may help establish the property, but it is not the definition of the property.
+
+If the context already has forbidden prior exposure, or the prior-information boundary cannot be established confidently, stop or reclassify the task before substantive evidence inspection. Later quarantine, omission or an instruction to forget cannot restore a blind or clean-context claim.
+
 ### Executable-task preflight
 
 Before approval, verify:
@@ -165,6 +186,22 @@ Before approval, verify:
 - the disposable workspace, permitted side effects and recovery action are defined.
 
 A documented command is not an executable fixture. Record preflight as `Pass`, `Fail` or `Not required`. A failed preflight requires revision, deferral or an explicitly approved source-inspection-only task.
+
+### Publication and write-path capability preflight
+
+When a bounded task or session can complete only by publishing or writing a durable record, verify the write path **before substantive evidence collection begins**.
+
+Record:
+
+- the exact destination object;
+- the exact authorised write operation;
+- the connected tool or capability that will perform it;
+- the credential or permission boundary;
+- preflight disposition: `Pass`, `Fail` or `Not required`.
+
+This preflight establishes capability only. It does not create authority and must not widen the allowed destination, write type, credentials or mutation scope.
+
+On `Fail`, preserve or return the bounded record that the task is authorised to prepare, report the publication blocker and stop. Do not continue open-ended evidence discovery in the hope that a write path will become available later.
 
 ## 4. Retrieval modes are not equivalent
 
@@ -293,7 +330,7 @@ Record why the evidence, reader value or proportionality test does not justify w
 
 Check that the record names the exact decision needed, identifies why repository evidence is insufficient and states the inference that must not be made.
 
-## 9. Separate review and human validation
+## 9. Separate review, terminality and human validation
 
 A separate evidence review should assess:
 
@@ -317,6 +354,12 @@ State whether the reviewer is:
 
 Only actual independent human acceptance or reproduction should be labelled **Human validated**.
 
+When the approved workflow requires a separate review, define the durable record that closes the review gate. Before starting another review, check whether a qualifying terminal review already exists. Check again before publication when mutable review state could have changed during the session.
+
+If the gate is already terminal, stop without publishing another substantively duplicate review. Historical duplicate reviews remain orchestration evidence; repetition does not add independent validation weight merely by count.
+
+A re-review is allowed when the governing contract requires it after material evidence changes, remediation or another explicit trigger. Record that trigger rather than treating a terminal review gate as permanently immutable.
+
 ## 10. Evidence register
 
 Use a compact register for material sources.
@@ -333,9 +376,12 @@ Before close-out or review, ask:
 
 - Does every material claim have an accurate claim state?
 - Are direct observations separated from judgements or inferences against a named authority?
-- Do execution-evidence states describe what actually happened?
+- Is there exactly one primary task result from `Complete`, `Partial`, `Blocked` or `Not tested`?
+- Do subordinate execution-evidence states use explicit yes/no wording rather than reusing a primary task result?
 - Did every executable task have a recorded preflight disposition?
+- Did every task/session that requires durable publication have a publication/write-path capability preflight before substantive evidence collection?
 - Did every blinded task preserve its evidence allowlist and leakage boundary?
+- Was any freshness or zero-history claim defined by the actual prior-information boundary rather than a particular UI mechanism?
 - Are retrieval modes explicit and non-equivalent?
 - Are resolved dependency and runtime versions recorded?
 - Are material command results durable?
@@ -344,5 +390,6 @@ Before close-out or review, ask:
 - Is uncertainty preserved where authority is absent?
 - Does validation match the selected response?
 - Is review independence described honestly?
+- If a review gate is already terminal, did later review attempts stop without duplicate publication unless a re-review trigger exists?
 
 Evidence quality is part of the documentation decision. It is not administrative decoration.
