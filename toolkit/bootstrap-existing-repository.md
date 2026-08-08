@@ -211,7 +211,7 @@ A maintainer must approve or revise:
 - evidence allowlists and forbidden prior exposure;
 - freshness or prior-information boundaries where required;
 - executable-task preflight dispositions;
-- publication/write-path capability preflight dispositions;
+- publication/write-path capability preflight dispositions for approved tasks that require durable publication;
 - permitted commands and network access;
 - disposable write locations;
 - credential boundary;
