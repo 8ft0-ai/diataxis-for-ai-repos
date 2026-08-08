@@ -81,9 +81,12 @@ Complete the full record, including:
 - **Durable command/result record:**
 - **Initial evidence budget and use:**
 - **Material evidence excluded by the budget:**
+- **Publication/write-path capability preflight:** Pass / Fail / Not required — evidence
 - **Publication result:** complete / blocked — evidence
 - **Publication intervention required:** none / describe
 - **Material limitations:**
+
+Capability preflight establishes only whether the exact authorised durable write could be performed. It does not create or widen mutation authority.
 
 ### Evidence register
 
@@ -116,7 +119,9 @@ Use **Not applicable — no material local or remote effect** when the assessmen
 - **Approval record:**
 - **Task-pack consistency disposition:**
 - **Execution-context and ordering allocation:**
+- **Freshness / prior-information boundaries:**
 - **Executable-task preflight dispositions:**
+- **Publication/write-path capability preflight dispositions:**
 - **Blinded evidence allowlists and leakage checks:**
 - **Material deviations:** none / discovery and authority
 
@@ -131,13 +136,21 @@ Copy for each approved task. Omit this section for a narrow Level 1 classificati
 
 - Reader group:
 - Starting context:
+- Freshness / forbidden-prior-exposure check: pass / fail / not required — evidence
 - Completion condition:
 - Expected entry point:
 - Actual path:
 - Durable commands or interactions:
 - Retrieval mode:
 - Runtime and dependency versions:
+- Publication/write-path capability preflight: Pass / Fail / Not required — evidence
 - Execution-evidence states:
+  - Source inspected: yes / no
+  - Command executed: yes / no
+  - Behaviour observed: yes / no
+  - Clean-context completed: yes / no
+  - Separately reviewed: yes / no
+  - Human validated: yes / no
 - Primary result: Complete / Partial / Blocked / Not tested
 - Observable friction:
 - Supporting evidence:
@@ -146,6 +159,8 @@ Copy for each approved task. Omit this section for a narrow Level 1 classificati
 - Finding ID: none / F1
 - Limitations:
 ```
+
+Use exactly one primary task result. `Not tested` is not a subordinate execution-evidence state; use explicit yes/no fields to record what was or was not inspected, executed, observed, reviewed or human validated.
 
 ## 6. Findings
 
@@ -245,13 +260,16 @@ Examples:
 - retain supported by task completion;
 - no change supported by evidence or proportionality.
 
-## 10. Evidence review
+## 10. Evidence review and terminality
 
 - **Reviewer:**
 - **Reviewer type:** independent human / different agent or session / same account fresh pass / not performed
 - **Independence limitation:**
 - **Evidence supplied:**
 - **Tasks repeated:**
+- **Qualifying terminal review record:** none / durable record
+- **Review gate terminal:** yes / no / not required
+- **Re-review trigger:** none / material evidence changed / remediation changed reviewed evidence / other explicit authority
 
 ### Judgements
 
@@ -263,6 +281,12 @@ Examples:
 - **Usefulness and proportionality:** Accept / Revise / Reject / Not reviewed
 
 Do not label a same-agent review as human validation.
+
+When a separate review is required, the governing contract should define what qualifying durable record closes the gate. Before starting another review and again before publishing when mutable review state could have changed, check whether that gate is already terminal.
+
+If a qualifying terminal review already exists, stop without publishing a substantively duplicate review. Duplicate historical reviews remain orchestration evidence rather than additional validation weight merely by count.
+
+A re-review is appropriate only when the governing contract requires it after material evidence changes, remediation or another explicit trigger. Record that trigger.
 
 ## 11. Usefulness and proportionality
 

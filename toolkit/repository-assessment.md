@@ -32,7 +32,9 @@ Initial controls
 
 1. Before inventory or analysis, set a proportionate evidence budget for required toolkit files, target documentation and authority surfaces, mutable live objects, elapsed time or interactions where useful, and material exclusions.
 2. Identify the existing durable record and the bounded assessment-record comment that is authorised there.
-3. Stop discovery when the required output is supported; do not consume the remaining budget merely because it is available.
+3. If the required first output must be published, verify before substantive evidence collection that the connected capability can perform the exact authorised write to the exact destination using only the approved permission boundary. Record publication/write-path capability preflight as Pass, Fail or Not required.
+4. Publication capability does not create authority or widen the allowed write. On Fail, preserve or return the bounded record and stop rather than continuing evidence discovery.
+5. Stop discovery when the required output is supported; do not consume the remaining budget merely because it is available.
 
 Assessment work
 
@@ -41,10 +43,11 @@ Assessment work
 3. Propose only reader groups supported by observable interfaces and documentation paths.
 4. Propose a small, proportionate set of representative reader tasks.
 5. Give every task a starting context, recognisable completion condition, expected documentation entry point, execution-context identity, order dependency, evidence allowlist, forbidden prior exposure, executable-prerequisite preflight disposition and reason it is material.
-6. Check the proposed task pack as a whole for context or ordering conflicts, unavailable execution prerequisites and blinded-evidence leakage. Revise, defer or remove invalid tasks before requesting approval.
-7. Propose the execution and safety boundary needed to test each task.
-8. Identify protected decisions that require human authority.
-9. State where fewer tasks, fewer readers or no further assessment may be appropriate.
+6. Where a task requires a fresh, clean-context or zero-history property, define it by the information available to the execution context before invocation and by the task's forbidden prior exposure. Authorised instructions, fixture identities, allowlists or control capsules supplied at invocation do not by themselves invalidate freshness unless they disclose excluded evidence. Do not make a specific chat or UI mode the definition of freshness.
+7. Check the proposed task pack as a whole for context or ordering conflicts, unavailable execution prerequisites and blinded-evidence leakage. Revise, defer or remove invalid tasks before requesting approval.
+8. Propose the execution and safety boundary needed to test each task.
+9. Identify protected decisions that require human authority.
+10. State where fewer tasks, fewer readers or no further assessment may be appropriate.
 
 Do not select tasks merely to manufacture tutorial, how-to, reference and explanation outcomes. Do not create work because a category or directory is empty.
 
@@ -56,12 +59,12 @@ C. Authority map
 D. Contradictions and stale claims
 E. Protected decisions and unresolved uncertainty
 F. Proposed reader groups with evidence basis
-G. Proposed representative tasks with starting contexts, completion conditions, execution-context allocation, ordering, evidence allowlists and prerequisite preflight dispositions
+G. Proposed representative tasks with starting contexts, completion conditions, execution-context allocation, ordering, evidence allowlists, freshness boundaries and prerequisite preflight dispositions
 H. Proposed execution boundary and prohibited operations
-I. Whole-pack consistency disposition, initial evidence budget, material exclusions, bounded assessment-record publication step, representativeness and evidence limitations
+I. Whole-pack consistency disposition, initial evidence budget, material exclusions, publication/write-path capability preflight, bounded assessment-record publication step, representativeness and evidence limitations
 J. Human approval request
 
-Once the required evidence is collected, stop discovery and attempt only the authorised assessment-record comment within its stated bound. If that write fails, preserve or return the prepared record and report a publication blocker. Stop after section J. Do not begin walkthrough execution until a maintainer approves or revises the reader groups, tasks, priorities, starting contexts, completion conditions, task-pack controls, evidence budget, publication stop, execution boundary and review boundary.
+Once the required evidence is collected, stop discovery and attempt only the authorised assessment-record comment within its stated bound. If that write fails after a passed capability preflight, preserve or return the prepared record and report a publication blocker. Stop after section J. Do not begin walkthrough execution until a maintainer approves or revises the reader groups, tasks, priorities, starting contexts, completion conditions, task-pack controls, evidence budget, publication stop, execution boundary and review boundary.
 ```
 
 ## Required assessment record
@@ -158,11 +161,14 @@ Each task must describe an outcome, not a Diátaxis category.
 - **Order dependency:** none / before or after named task
 - **Permitted evidence allowlist:**
 - **Forbidden prior exposure:**
-- **Expected evidence states:** source inspected / command executed / behaviour observed / clean-context completed / not tested
-- **Executable-prerequisite preflight:** pass / fail / not required — evidence
+- **Freshness / prior-information boundary:** pass / fail / not required — evidence
+- **Expected subordinate execution evidence:** source inspected yes/no; command executed yes/no; behaviour observed yes/no; clean-context completed yes/no; separately reviewed yes/no; human validated yes/no
+- **Executable-prerequisite preflight:** Pass / Fail / Not required — evidence
 - **Protected decisions:**
 
 Prefer a small set of materially distinct tasks. A task is not representative merely because it is easy to execute.
+
+`Complete`, `Partial`, `Blocked` and `Not tested` are reserved for the later primary task result. Do not use `Not tested` as a subordinate execution-evidence state.
 
 ### H. Proposed execution boundary
 
@@ -176,13 +182,17 @@ Record the operations required to test the proposed tasks.
 - **Credentials:** none unless explicitly authorised
 - **Target state that must remain unchanged:**
 - **Restoration or cleanup requirement:**
+- **Publication destination and exact authorised write operation:** none / record
+- **Publication/write-path capability preflight:** Pass / Fail / Not required — evidence
 - **Prohibited operations:**
 
 If no execution is needed, say so rather than inventing a command path.
 
 Before proposing an executable task for approval, verify the exact pinned checkout or immutable source, runtime, dependencies, read-only credential boundary, authorised network path, disposable workspace, permitted side effects and recovery boundary. A failed preflight requires task revision, deferral or an explicit source-inspection-only proposal.
 
-For blinded tasks, define immutable evidence objects and check whether commit titles, timelines, linked issues, broad comment retrieval or the current target state reveal the excluded outcome. If isolation cannot be established, revise the fixture or label the task non-blind before approval.
+For blinded tasks, define immutable evidence objects and check whether commit titles, timelines, linked issues, broad comment retrieval or the current target state reveal the excluded outcome. If isolation cannot be established, revise the fixture or label the task non-blind before approval. A later instruction to forget or quarantine exposed evidence cannot restore a blind.
+
+When a durable publication is part of completion, capability preflight must occur before substantive evidence collection. A passed capability preflight verifies only that the exact authorised write can be performed; it does not grant authority to write elsewhere or perform additional mutations.
 
 ### I. Limitations and proportionality
 
@@ -193,7 +203,8 @@ State:
 - which proposed tasks rely only on source inspection;
 - which claims require execution or human knowledge;
 - whether Level 1, Level 2 or Level 3 is proportionate;
-- whether a smaller assessment or no further work is justified.
+- whether a smaller assessment or no further work is justified;
+- the publication/write-path capability preflight and any limitation it creates.
 
 Set and report an initial evidence budget covering:
 
@@ -217,7 +228,9 @@ Approved tasks and priority:
 Approved starting contexts and completion conditions:
 Approved task ordering and execution-context allocation:
 Approved evidence allowlists and forbidden prior exposure:
+Approved freshness / prior-information boundaries:
 Executable-task preflight dispositions:
+Publication/write-path capability preflight:
 Approved execution boundary:
 Approved evidence budget and publication stop:
 Approved review boundary:
