@@ -107,6 +107,8 @@ The issue should authorise inspection and task proposal only. It should not auth
 - target-content publication or deployment, apart from the single bounded assessment-record comment explicitly authorised by the issue;
 - changes to workflows, settings or permissions.
 
+Before substantive evidence inspection, preflight any durable publication required for completion. For the standard assessment issue below, identify the exact assessment issue as the destination and the single assessment-record comment as the authorised operation; verify the connected capability can perform that write using only the approved credential or permission boundary; and record `Pass`, `Fail` or `Not required`. This is a capability check only and does not create authority for any other write. On `Fail`, preserve or return the bounded record and stop before beginning documentation inventory or analysis.
+
 ### 3. Inspect existing documentation as evidence
 
 Begin with surfaces relevant to plausible reader outcomes, such as:
@@ -173,7 +175,9 @@ Every task must include:
 - proposed retrieval and execution mode;
 - execution-context identity and required order;
 - permitted evidence allowlist and forbidden prior exposure where isolation matters;
+- freshness or prior-information boundary where a fresh, clean-context or zero-history property matters;
 - executable-prerequisite preflight disposition;
+- publication/write-path capability preflight disposition when durable publication is part of completion;
 - execution boundary;
 - protected decisions and uncertainty.
 
@@ -182,13 +186,16 @@ Do not select tasks merely to manufacture tutorial, how-to, reference and explan
 Before approval, check the proposed task pack as a whole:
 
 - identify which tasks may share a context and which require separate fresh contexts;
+- define freshness by the material information available before invocation and the task's forbidden prior exposure, not by a named chat or UI mechanism;
+- treat authorised invocation instructions, fixture identities, allowlists and control capsules as permitted inputs unless they themselves disclose evidence excluded by the task contract;
 - detect whether an earlier task exposes evidence that a later task forbids;
 - define task order only where that order preserves every starting context;
 - preflight the exact pinned source, runtime, dependencies, read-only credentials, network path and disposable workspace for executable tasks;
+- preflight the exact destination, authorised operation and connected write capability before substantive evidence collection for tasks that require durable publication;
 - define an immutable evidence allowlist for blinded tasks and check metadata, timelines, links and broad retrieval results for outcome leakage;
-- revise, defer or remove tasks whose prerequisites or isolation cannot be established.
+- revise, defer or remove tasks whose prerequisites, publication capability or isolation cannot be established.
 
-A documented command is not, by itself, an executable fixture. Later quarantine cannot restore a blind after excluded outcome evidence has been exposed.
+A documented command is not, by itself, an executable fixture. Later quarantine or an instruction to forget cannot restore a blind after excluded outcome evidence has been exposed.
 
 ### 6. Stop for human task approval
 
@@ -202,7 +209,9 @@ A maintainer must approve or revise:
 - completion conditions;
 - task ordering and execution-context allocation;
 - evidence allowlists and forbidden prior exposure;
+- freshness or prior-information boundaries where required;
 - executable-task preflight dispositions;
+- publication/write-path capability preflight dispositions;
 - permitted commands and network access;
 - disposable write locations;
 - credential boundary;
@@ -313,6 +322,19 @@ Read, in order:
 
 Do not rely on private conversation history or assumptions about why the target repository was designed.
 
+## Publication/write-path capability preflight
+
+Before substantive evidence collection, verify that the connected capability can post exactly one assessment-record comment to this issue using only the approved credential or permission boundary.
+
+Record:
+
+- destination: this assessment issue;
+- authorised operation: one assessment-record comment containing the required first output;
+- capability disposition: `Pass` / `Fail` / `Not required`;
+- credential or permission boundary.
+
+Capability does not create authority for any other issue, comment, file, branch, workflow, setting, release or deployment mutation. On `Fail`, preserve or return the bounded record and stop before substantive evidence inspection.
+
 ## Target repository
 
 - **Repository:** `<OWNER/REPOSITORY>`
@@ -362,6 +384,8 @@ Distinguish:
 
 Preserve contradictions and uncertainty. Do not complete missing rationale with plausible prose.
 
+Where a task requires fresh, clean-context or zero-history execution, define that property by the material information available before invocation and the task's forbidden prior exposure. Authorised invocation instructions, fixture identities, allowlists and control capsules do not themselves invalidate freshness unless they disclose excluded evidence. A named chat or UI mechanism is not the definition of freshness, and later quarantine or an instruction to forget cannot restore a blind after forbidden exposure.
+
 ## Initial scope
 
 Inspect relevant existing surfaces, including where present:
@@ -396,21 +420,23 @@ Do not:
 Post the following to this issue:
 
 1. repository identity and pinned commit;
-2. documentation and authority inventory;
-3. contradictions and stale claims;
-4. protected decisions and unresolved uncertainty;
-5. proposed reader groups with evidence basis;
-6. proposed representative tasks;
-7. starting context, execution-context identity, order dependency and completion condition for each task;
-8. proposed evidence allowlist and forbidden prior exposure for any blinded task;
-9. executable-prerequisite preflight disposition for each executable task;
-10. proposed execution boundary;
-11. initial evidence budget and material exclusions;
-12. bounded assessment-record comment and publication stop condition;
-13. representativeness and proportionality limitations;
-14. explicit human task-approval request.
+2. publication/write-path capability preflight disposition and permission boundary;
+3. documentation and authority inventory;
+4. contradictions and stale claims;
+5. protected decisions and unresolved uncertainty;
+6. proposed reader groups with evidence basis;
+7. proposed representative tasks;
+8. starting context, execution-context identity, order dependency and completion condition for each task;
+9. proposed evidence allowlist, forbidden prior exposure and freshness boundary for any task requiring isolation;
+10. executable-prerequisite preflight disposition for each executable task;
+11. publication/write-path capability preflight disposition for any later task whose completion requires a durable write;
+12. proposed execution boundary;
+13. initial evidence budget and material exclusions;
+14. bounded assessment-record comment and publication stop condition;
+15. representativeness and proportionality limitations;
+16. explicit human task-approval request.
 
-Once the required evidence has been collected, stop discovery, assemble this record and post it as the single authorised assessment-record comment to this issue within the stated bound. This does not authorise target-content publication or deployment. If the comment cannot be posted, preserve or return the prepared record and report a publication blocker. Do not resume open-ended inspection.
+Once the required evidence has been collected, stop discovery, assemble this record and post it as the single authorised assessment-record comment to this issue within the stated bound. This does not authorise target-content publication or deployment. If a previously passed comment write path becomes unavailable at publication time, preserve or return the prepared record and report a publication blocker. Do not resume open-ended inspection.
 
 ## Human approval gate
 
@@ -422,7 +448,9 @@ Do not execute walkthroughs until a maintainer records:
 - approved completion conditions;
 - approved task ordering and execution-context allocation;
 - approved evidence allowlists and forbidden prior exposure;
+- approved freshness or prior-information boundaries;
 - executable-task preflight dispositions;
+- publication/write-path capability preflight dispositions;
 - approved execution boundary;
 - approved evidence budget and publication stop;
 - approved review boundary;
@@ -442,7 +470,9 @@ The close-out should produce bounded remediation, retained paths, no-change deci
 
 ## Before starting the first external bootstrap
 
-Use a fresh agent context where practical. Supply the target repository, the assessment issue and the pinned toolkit commit, but not the private history of how this toolkit was developed.
+Use a context that can satisfy the approved freshness boundary where the assessment requires one. Define that boundary by pre-invocation information and forbidden prior exposure rather than by a particular product or chat mode. Supply the target repository, the assessment issue and the pinned toolkit commit as authorised invocation inputs; those inputs do not themselves contaminate freshness unless they disclose evidence the task excludes.
+
+Before substantive evidence inspection, verify the exact authorised assessment-record comment write path and record its publication/write-path capability preflight. On `Fail`, preserve or return the bounded record and stop rather than beginning inventory or analysis.
 
 Set a proportionate evidence budget before inspection begins. The first output should stop discovery once the required record is complete, post the bounded assessment-record comment authorised by the target issue, and then stop at the human task-approval gate. That provides direct evidence of whether the toolkit is understandable and usable without issue archaeology from this repository.
 
