@@ -16,6 +16,7 @@ Before starting each task, copy the approved fields without silently changing th
 - execution-context identity and required order;
 - permitted evidence allowlist and forbidden prior exposure;
 - executable-prerequisite preflight disposition;
+- publication/write-path capability preflight disposition when durable publication is part of completion;
 - permitted operations;
 - prohibited operations;
 - review boundary;
@@ -23,11 +24,15 @@ Before starting each task, copy the approved fields without silently changing th
 
 If the task must be materially redefined, stop and request approval.
 
-Do not begin an executable task whose approved preflight is missing or failed. Do not begin a blinded task if the current context has already seen forbidden evidence. Stop and record the invalid condition; changing order or pretending to forget requires new authority.
+Do not begin an executable task whose approved preflight is missing or failed. Do not begin a blinded or clean-context task if the current context already has forbidden prior exposure. Stop and record the invalid condition; changing order or pretending to forget requires new authority.
 
-## 2. Record the evidence environment
+Freshness is an execution property defined by the information available before task invocation and the task's forbidden prior exposure. Authorised instructions, fixture identities, allowlists or control capsules supplied at invocation do not themselves invalidate freshness unless they disclose evidence the task contract excludes. A particular chat or UI mode may help establish isolation, but it is not the definition of isolation.
 
-Before execution, record:
+If the prior-information boundary cannot be established confidently, stop or reclassify the task before substantive evidence inspection. Later quarantine cannot restore a blind or clean-context claim.
+
+## 2. Record the evidence environment and required capabilities
+
+Before substantive evidence collection or execution, record:
 
 - target repository and pinned commit or evidence state;
 - retrieval mode;
@@ -37,9 +42,15 @@ Before execution, record:
 - network access used;
 - credentials or secrets used;
 - fixture, cache and output locations;
-- target-state and restoration checks.
+- target-state and restoration checks;
+- publication/write destination and operation when the task must publish a durable record;
+- publication/write-path capability preflight: `Pass` / `Fail` / `Not required`.
 
 Dependency and runtime versions are first-class evidence when the task depends on installation, build, tests or runtime behaviour.
+
+When publication is required for completion, verify before substantive evidence collection that the connected capability can perform the exact authorised write to the exact destination using only the approved credential/permission boundary. Capability preflight does not create authority or widen the allowed write.
+
+If publication capability preflight is `Fail`, preserve or return the bounded record the task is authorised to prepare, report the publication blocker and stop. Do not continue inspecting evidence in the hope that a write path will become available later.
 
 ## 3. Use explicit retrieval and execution modes
 
@@ -58,17 +69,18 @@ A behavioural fallback is not a pinned checkout. Connector inspection is not com
 
 ### Execution-evidence states
 
-These states are non-exclusive:
+Record subordinate evidence explicitly as yes/no:
 
-- **Source inspected** — repository source, documentation or configuration was examined.
-- **Command executed** — a named command was run in the recorded environment.
-- **Behaviour observed** — runtime output or behaviour was directly observed.
-- **Clean-context completed** — the approved reader reached the completion condition from the approved unfamiliar starting context.
-- **Separately reviewed** — another review pass checked the evidence or repeated part of the task.
-- **Human validated** — a human independently accepted or reproduced the result.
-- **Not tested** — the relevant execution or behaviour was not tested.
+- **Source inspected:** yes / no
+- **Command executed:** yes / no
+- **Behaviour observed:** yes / no
+- **Clean-context completed:** yes / no
+- **Separately reviewed:** yes / no
+- **Human validated:** yes / no
 
 Do not claim clean-context completion merely because a command succeeded in a different environment. Do not claim human validation for a same-agent review.
+
+`Complete`, `Partial`, `Blocked` and `Not tested` are primary task results, not subordinate evidence-state labels. A task whose primary result is `Complete` may still record `command executed: no` and `behaviour observed: no` when source inspection was sufficient for its approved completion condition.
 
 ## 4. Follow the existing documentation path
 
@@ -132,14 +144,14 @@ A single task may produce several events. Record expected Class C caches separat
 
 ## 7. Determine the task result
 
-Use one primary result:
+Use exactly one primary result:
 
 - **Complete** — the approved completion condition was reached through the existing path.
 - **Partial** — the path provided material help but did not reach the completion condition.
 - **Blocked** — the task could not safely proceed because evidence, authority, prerequisites or access were missing.
-- **Not tested** — required behaviour was not executed or observed.
+- **Not tested** — the approved task required behaviour that was not executed or observed, so the task completion contract remains untested.
 
-The result does not predetermine the documentation response. A complete task may justify retention. A blocked task may require human authority rather than a guide. Use `Not tested` when required behaviour did not run; use `Blocked` when the approved task could not safely begin or continue. Record both only when they describe different aspects, with one primary result.
+The result does not predetermine the documentation response. A complete task may justify retention. A blocked task may require human authority rather than a guide. Use primary `Not tested` only when the required task behaviour was not executed or observed; otherwise describe non-executed subordinate evidence with explicit fields such as `command executed: no` or `behaviour observed: no`.
 
 ## 8. Describe observable friction
 
@@ -168,6 +180,7 @@ Copy this record for each approved task.
 
 - Reader group:
 - Starting context:
+- Freshness / forbidden-prior-exposure check: pass / fail / not required — evidence
 - Completion condition:
 - Expected documentation entry point:
 - Actual path followed:
@@ -175,15 +188,15 @@ Copy this record for each approved task.
 - Durable command/result evidence:
 - Retrieval mode:
 - Runtime and dependency versions:
+- Publication/write-path capability preflight: Pass / Fail / Not required — evidence
 - Mutation or local-effect events: none / M1, M2
 - Execution-evidence states:
-  - [ ] Source inspected
-  - [ ] Command executed
-  - [ ] Behaviour observed
-  - [ ] Clean-context completed
-  - [ ] Separately reviewed
-  - [ ] Human validated
-  - [ ] Not tested
+  - Source inspected: yes / no
+  - Command executed: yes / no
+  - Behaviour observed: yes / no
+  - Clean-context completed: yes / no
+  - Separately reviewed: yes / no
+  - Human validated: yes / no
 - Primary result: Complete / Partial / Blocked / Not tested
 - Observable friction:
 - Supporting evidence:
@@ -195,16 +208,18 @@ Copy this record for each approved task.
 
 ## 10. Finish and publish the task record
 
+Publication capability must already have been preflighted under section 2 when publication is part of the approved completion condition.
+
 Once the approved task evidence and required limitations are recorded:
 
 1. stop discovery and additional repository inspection;
 2. assemble the compact task record;
-3. attempt the authorised durable publication within the approved interaction or time bound;
+3. attempt only the authorised durable publication within the approved interaction or time bound;
 4. stop after successful publication.
 
-If publication cannot complete, preserve or return the prepared record and report a publication blocker. Do not resume evidence collection merely because publication is stalled.
+If an already-passed write path becomes unavailable at publication time, preserve or return the prepared record and report a publication blocker. Do not resume evidence collection merely because publication is stalled.
 
-## 11. Separate evidence review
+## 11. Separate evidence review and terminality
 
 A separate review should receive the final task records and cited evidence.
 
@@ -228,3 +243,9 @@ Label the reviewer accurately:
 - other disclosed relationship.
 
 A separate pass by the drafting or assessing agent is useful evidence, but it is not independent human validation.
+
+If the approved workflow requires a separate review, define which durable qualifying review closes that gate. Before beginning another review, inspect the current durable record for an already-terminal qualifying review. Check again immediately before publication when the review state could have changed while the session was running.
+
+If the review gate is already terminal, stop without publishing another substantively duplicate review. Duplicate historical review comments remain orchestration evidence, not extra validation merely by repetition.
+
+A re-review may proceed only when the governing contract requires it after material evidence changes, remediation or another explicit trigger. Record that trigger.
