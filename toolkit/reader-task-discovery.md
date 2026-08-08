@@ -91,7 +91,7 @@ The starting context, completion condition and execution boundary can be stated 
 
 ### Observable
 
-The assessor can distinguish complete, partial, blocked and not-tested outcomes using repository or execution evidence.
+The assessor can distinguish the primary outcomes `Complete`, `Partial`, `Blocked` and `Not tested` using repository or execution evidence.
 
 ### Proportionate
 
@@ -108,7 +108,8 @@ Record:
 - repository state or release used;
 - credentials or access assumed;
 - documentation entry point supplied;
-- knowledge deliberately not assumed.
+- knowledge deliberately not assumed;
+- forbidden prior exposure when freshness or isolation matters.
 
 Examples:
 
@@ -116,6 +117,8 @@ Examples:
 - “A maintainer with the repository checked out at the pinned commit and access only to checked-in contributor guidance.”
 
 Do not silently grant the reader knowledge discovered during the assessment.
+
+Where a task requires a fresh, clean-context or zero-history property, define it by the information available before invocation and the task's forbidden prior exposure. Authorised task instructions, fixture identities, allowlists or control capsules supplied at invocation do not themselves invalidate freshness unless they disclose excluded evidence. Do not make a specific chat or UI mode the definition of freshness.
 
 ## 5. Define a recognisable completion condition
 
@@ -201,14 +204,18 @@ Stop when:
 - Order dependency:
 - Permitted evidence allowlist:
 - Forbidden prior exposure:
-- Expected execution-evidence states:
+- Freshness / prior-information boundary: pass / fail / not required — evidence
+- Expected subordinate execution evidence: source inspected yes/no; command executed yes/no; behaviour observed yes/no; clean-context completed yes/no; separately reviewed yes/no; human validated yes/no
 - Required environment or dependencies:
-- Executable-prerequisite preflight: pass / fail / not required — evidence
+- Executable-prerequisite preflight: Pass / Fail / Not required — evidence
+- Publication/write-path capability preflight: Pass / Fail / Not required — evidence when durable publication is part of completion
 - Proposed retrieval and execution mode:
 - Proposed execution boundary:
 - Protected decisions and uncertainty:
 - Representativeness limitation:
 ```
+
+`Complete`, `Partial`, `Blocked` and `Not tested` are reserved for the later primary task result. Subordinate evidence records what actually happened with explicit yes/no fields.
 
 ## 9. Review the proposed set before approval
 
@@ -223,7 +230,9 @@ Check:
 - Could one task or reader be removed without reducing decision value?
 - Would completing one task expose evidence forbidden by another?
 - Are separate fresh contexts, fixture changes or ordering changes required?
+- Are freshness requirements defined by prior-information boundaries rather than a named UI mechanism?
 - Have executable prerequisites been preflighted rather than inferred from a documented command?
+- If durable publication is part of completion, has the exact write path and capability been preflighted before substantive evidence collection?
 - Do blinded tasks have an immutable evidence allowlist and a metadata-leak check?
 - Are unsafe or authority-dependent tasks marked for stopping?
 - Is the adoption level proportionate?
@@ -244,7 +253,9 @@ Approved starting contexts:
 Approved completion conditions:
 Approved task ordering and execution-context allocation:
 Approved evidence allowlists and forbidden prior exposure:
+Approved freshness / prior-information boundaries:
 Executable-task preflight dispositions:
+Publication/write-path capability preflight dispositions:
 Approved execution boundary:
 Approved evidence budget and publication stop:
 Approved review boundary:
