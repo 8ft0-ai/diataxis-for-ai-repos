@@ -1,6 +1,6 @@
 # Project roadmap
 
-This roadmap records the direction of `diataxis-for-ai-repos` after the clarification-only `v0.1.1` release and its bounded post-release control rerun.
+This roadmap records the direction of `diataxis-for-ai-repos` after the clarification-only `v0.1.1` release, its bounded post-release control rerun, and the subsequent method and fresh-agent operability evidence cycle.
 
 It is not an implementation plan and does not authorise repository changes. A roadmap entry becomes executable work only through the repository's normal GitHub planning and execution process.
 
@@ -41,7 +41,7 @@ The idea may become relevant after earlier evidence gates are satisfied. It is n
 
 ## Current release — assessment-only `v0.1.1`
 
-**State: Current capability; bounded follow-up adaptation committed under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35)**
+**State: Current assessment-only capability; post-release method clarifications completed under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged via [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36)**
 
 The [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.1) provides the minimal assessment-only toolkit from `v0.1.0` plus the six clarification controls implemented under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) and [PR #30](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/30). It helps a maintainer or repository-aware agent:
 
@@ -64,13 +64,17 @@ The [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases
 
 The release stops before documentation drafting. It does not provide a CLI, installer, hosted service, autonomous agent framework, automatic repository scanning or a complete drafting system.
 
-The bounded post-release control rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33) completed and the repository owner accepted an **Adapt** disposition. The rerun supported the central `v0.1.1` controls while identifying four narrower method adaptations now governed by [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35): independent-review terminality/idempotency; freshness or zero-history as an execution property rather than a named UI mechanism; publication/write-path capability preflight; and unambiguous separation of the primary `Not tested` result from subordinate execution-evidence states.
+The bounded post-release control rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33) completed and the repository owner accepted an **Adapt** disposition. The rerun supported the central `v0.1.1` controls while identifying four narrower method adaptations: independent-review terminality/idempotency; freshness or zero-history as an execution property rather than a named UI mechanism; publication/write-path capability preflight; and unambiguous separation of the primary `Not tested` result from subordinate execution-evidence states. Those adaptations were implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged through [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
 
 The rerun did **not** establish the deferred T2 Production Daily behaviour or T4 offline runtime behaviour from the arxiv-quant-radar fixture. It also does not establish independent maintainer usability, large-repository proportionality, broad repository generality, drafting quality, human validation or model-to-model portability.
 
+After the #35 clarifications merged, [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) tested the narrower question of solo-maintainer operability with fresh-agent assistance. Its final disposition was **Repeat** because the task invocation itself disclosed answer-bearing target specifics that invalidated the intended clean-context evidence. That evidence was not retroactively repaired. [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39) repeated the same two tasks with answer-neutral task contracts, preserved a contaminated T1 attempt as `Blocked`, completed both tasks in eligible fresh contexts, and received one qualifying independent-agent review with judgement `Supports bounded claim`. The repository owner then accepted the corrected repeat.
+
+That acceptance supports only the bounded conclusion that the assessment task-path workflow was operable in this solo-maintainer/fresh-agent case, for the pinned target, the two tested tasks and the recorded intervention level. It does **not** establish independent-human validation, independent-maintainer usability, population-level usability, broad repository portability, model portability, runtime correctness, scientific validity, generator/scaffold correctness, drafting quality or Horizon 2 readiness.
+
 ## Horizon 1 — validate adoption of the released assessment workflow
 
-**State: Completed; `v0.1.1` control rerun accepted with `Adapt`, bounded follow-up clarification committed under #35**
+**State: Completed; post-`v0.1.1` method clarifications merged and bounded fresh-agent operability evidence accepted under #39**
 
 ### Proposed milestone
 
@@ -120,11 +124,15 @@ The second pilot showed that the evidence and stopping disciplines remained usef
 
 The bounded post-release rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33) then tested those controls against substantially the same arxiv-quant-radar fixtures. It demonstrated earlier detection of incompatible task contexts and unavailable prerequisites, genuine stopping on blind-context contamination, bounded evidence budgets, clearer observation-versus-judgement attribution, and independent reproduction of one material result. T2 and T4 remained unexecuted because their required clean-network/exact-checkout environments were not established before approval; those are honest untested target behaviours, not target failures.
 
-The accepted #33 comparative close-out retained four smaller operating-model adaptations, now implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35). Horizon 1 still does not establish independent maintainer usability, broad portability or human validation.
+The accepted #33 comparative close-out retained four smaller operating-model adaptations. They were implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged via [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
+
+The subsequent operability pilot under [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) ended with **Repeat** after independent review identified answer-bearing information in task invocations that were intended to preserve freshness. The corrected repeat under [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39) used answer-neutral contracts, completed the same two source-inspection tasks in eligible fresh contexts, and was accepted after one qualifying independent-agent review concluded `Supports bounded claim`.
+
+Horizon 1 therefore has bounded evidence that the workflow can be operated by the sole maintainer with fresh-agent assistance for the tested case and recorded intervention level. It still does not establish independent maintainer usability, broad repository or model portability, large-repository proportionality or human validation.
 
 ## Horizon 2 — bounded drafting and document-type validation
 
-**State: Candidate, gated by completion and acceptance of #35 plus a separate authorising decision**
+**State: Candidate; the #35 method gate is satisfied, but progression still requires an accepted evidence-backed remediation item and a separate owner authorisation**
 
 The original project direction includes drafting contracts for tutorial, how-to, reference and explanation. These should not be added as a four-document generation matrix.
 
@@ -162,7 +170,7 @@ Before creating drafting contracts, the project should have:
 - an explicit validation procedure for the selected document type;
 - a clear before-and-after task or claim comparison;
 - a stopping condition for unresolved intent, policy or rationale;
-- completion and acceptance of the method clarifications under #35;
+- the completed method baseline from [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) / [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36);
 - a separate owner decision explicitly authorising the bounded drafting experiment.
 
 The correct next step may be one drafting contract, not all four.
@@ -275,19 +283,21 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Published the clarification-only [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.1) without claiming that the bounded control rerun succeeded.
 - Completed the bounded `v0.1.1` post-release control rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33), independently reproduced one material result and accepted a final **Adapt** disposition.
 - Superseded the mis-scoped Horizon 2 detour [#34](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/34) without target documentation or repository mutation.
+- Implemented the four accepted post-rerun method adaptations under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged them through [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
+- Ran the first solo-maintainer/fresh-agent operability pilot under [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) and recorded final disposition **Repeat** after the intended freshness evidence was invalidated by answer-bearing task invocation material.
+- Repeated the same two tasks with answer-neutral contracts under [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39); one qualifying independent-agent review concluded `Supports bounded claim`, and the repository owner accepted the corrected bounded operability evidence.
 
 ## Current commitments
 
-One bounded method-clarification contract is committed:
+There is currently **no active committed work**.
 
-- [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) implements the four post-rerun adaptations: review terminality/idempotency; freshness/zero-history execution semantics; publication/write-path capability preflight; and unambiguous primary-result versus subordinate evidence-state wording.
+Horizon 2 remains a Candidate direction. No drafting experiment, target remediation, release, automation, naming decision or broader capability is authorised merely by the completion of #35 or acceptance of #39.
 
-This commitment does not authorise a drafting experiment, target-repository work, automation, a release, project naming or broader Horizon 2 implementation.
+Any next implementation requires a new GitHub decision or execution contract with its own evidence, scope, validation and authority boundary.
 
 ## Open decisions
 
-- Does the implementation under #35 express the four accepted adaptations clearly and proportionately without creating new process ambiguity?
-- After #35 is accepted, is there an evidence-backed remediation item that genuinely requires one bounded drafting contract rather than retention, correction or navigation?
+- Is there an accepted assessment or remediation finding that genuinely requires one bounded drafting contract rather than retention, correction or navigation; if not, what is the smallest assessment needed to test that need without manufacturing a drafting task?
 - What level of independent maintainer involvement is needed before claiming external usability?
 - Which document type should receive the first drafting contract if evidence justifies one and the owner separately authorises it?
 - What form of independent review is proportionate for later drafting work?
