@@ -441,7 +441,7 @@ The project explicitly identified independent-maintainer usability as the next i
 
 The corrected solo-maintainer pilot is useful precisely because its conclusion was kept narrower. It should not be stretched into a reason to run more internal substitutes for the missing external evidence.
 
-There is an open issue #44 preparing `v0.1.2`, but its contract is release metadata only. It explicitly excludes new assessment method, drafting, automation, tooling and Horizon 2 capability. The current release remains `v0.1.1`; `main` already contains the accepted post-release changes. That housekeeping does not materially change the pause decision.
+`v0.1.2` has now been published at the accepted assessment-method baseline. The superseded release-preparation issue #44 was closed after #45 completed publication without widening the method, drafting, automation, tooling or Horizon 2 scope. That housekeeping does not materially change the pause decision.
 
 I would therefore treat the project as having reached a **method-learning plateau**.
 
