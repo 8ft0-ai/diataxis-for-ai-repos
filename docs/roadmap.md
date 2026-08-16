@@ -39,11 +39,11 @@ The direction appears useful, but more evidence or a human decision is required 
 
 The idea may become relevant after earlier evidence gates are satisfied. It is not planned work, should not be estimated, and must not be implemented merely because it appears here.
 
-## Current release — assessment-only `v0.1.1`
+## Current release — assessment-only `v0.1.2`
 
-**State: Current assessment-only capability; post-release method clarifications completed under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged via [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36)**
+**State: Current assessment-only capability; post-`v0.1.1` method adaptations published in `v0.1.2`**
 
-The [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.1) provides the minimal assessment-only toolkit from `v0.1.0` plus the six clarification controls implemented under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) and [PR #30](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/30). It helps a maintainer or repository-aware agent:
+The [`v0.1.2` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.2) publishes the accepted assessment-only baseline: the minimal toolkit from `v0.1.0`, the six clarification controls published in `v0.1.1`, and the four post-rerun method adaptations implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36). It helps a maintainer or repository-aware agent:
 
 - inspect repository evidence without changing the target repository;
 - identify evidence-supported reader groups;
@@ -286,6 +286,7 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Implemented the four accepted post-rerun method adaptations under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged them through [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
 - Ran the first solo-maintainer/fresh-agent operability pilot under [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) and recorded final disposition **Repeat** after the intended freshness evidence was invalidated by answer-bearing task invocation material.
 - Repeated the same two tasks with answer-neutral contracts under [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39); one qualifying independent-agent review concluded `Supports bounded claim`, and the repository owner accepted the corrected bounded operability evidence.
+- Published [`v0.1.2`](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.2) as the accepted post-`v0.1.1` assessment-method baseline without expanding the assessment-only scope.
 
 ## Current commitments
 
