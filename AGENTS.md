@@ -24,6 +24,16 @@ Private chat history is not authoritative. Record material decisions in GitHub.
 
 Source code may establish behaviour. It does not, by itself, establish project intent, policy, priority or architectural rationale.
 
+## Praxis dependency
+
+For governed engineering work, follow [`8ft0-ai/praxis`](https://github.com/8ft0-ai/praxis) and begin with `PRACTICE.md` from this repository's selected Praxis baseline.
+
+Praxis baseline: `424506507205448d026ae1d6637c4134aea2470a`.
+
+Resolve that baseline to one exact Praxis commit at the start of each governed task and keep the task pin unchanged for the lifetime of the task. Changing the repository-selected baseline requires a separately governed repository change.
+
+Repository-local instructions and explicit task authority take precedence over Praxis. Link to Praxis rather than copying Praxis-owned normative practice text, and select only practices that the pinned Praxis catalogue makes applicable to the task.
+
 ## Classify the issue before acting
 
 A **planning issue** shapes a decision. It does not authorise implementation unless an approved decision explicitly says so.
