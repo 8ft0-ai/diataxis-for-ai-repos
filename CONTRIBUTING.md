@@ -2,7 +2,7 @@
 
 Thank you for helping develop an evidence-led approach to repository documentation.
 
-The project is at an early stage. Contributions should test or improve the operating method without assuming that the full proposed toolkit, repository structure or provisional name has been approved.
+The project is at an early stage. Contributions should test or improve the operating method without assuming that the full proposed toolkit or repository structure has been approved.
 
 ## Start with the right issue
 
