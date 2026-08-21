@@ -4,7 +4,7 @@ These instructions apply to repository-aware AI agents working in this repositor
 
 ## Project state
 
-`diataxis-for-ai-repos` is developing an evidence-led method for AI-assisted repository documentation. **TaskFirstDocs** is a provisional name.
+`Trailpost` is developing an evidence-led method for AI-assisted repository documentation.
 
 The repository contains a minimal assessment-only V1 under [`toolkit/`](toolkit/README.md). It does not provide a complete product, documentation-drafting system, automation platform or broad roadmap.
 

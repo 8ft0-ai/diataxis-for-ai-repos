@@ -1,6 +1,5 @@
-# diataxis-for-ai-repos
+# Trailpost
 
-**Provisional project name:** TaskFirstDocs  
 **Working description:** Evidence-led Diátaxis workflows for AI-assisted repository documentation.
 
 This repository develops a model-agnostic method for improving documentation decisions in existing software repositories. The method begins with repository evidence and representative reader tasks. It does not ask an AI agent to generate documentation merely because a page or directory appears to be missing.
@@ -24,8 +23,6 @@ The toolkit helps a maintainer or repository-aware agent produce, without changi
 It stops before documentation drafting. It does not provide a CLI, hosted service, autonomous agent framework, automatic repository scanning or stable drafting contracts for all four Diátaxis forms.
 
 The package is based on two accepted small-repository experiments. It does not establish cross-agent, cross-practitioner, large-repository or broad repository generality.
-
-The name **TaskFirstDocs** remains provisional until explicitly approved.
 
 ## Project direction
 

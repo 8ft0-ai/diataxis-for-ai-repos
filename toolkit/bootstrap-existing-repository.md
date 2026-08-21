@@ -4,7 +4,7 @@ Use this guide when the target repository already contains README files, guides,
 
 The assessment-only V1 is ready to support this bootstrap. It is not an installer, documentation generator or autonomous remediation system. The initial outcome is evidence and a bounded backlog, not documentation changes.
 
-> **Project-name status:** **TaskFirstDocs** remains a provisional name. This guide does not approve or adopt it.
+> **Project:** **Trailpost**.
 
 ## What bootstrap means here
 
@@ -38,7 +38,7 @@ Do not initially copy the toolkit files into the target repository. Referencing 
 
 Record both:
 
-- the toolkit repository: `8ft0-ai/diataxis-for-ai-repos`;
+- the toolkit repository: `8ft0-ai/trailpost`;
 - the exact toolkit commit selected for the assessment.
 
 Use a released or reviewed commit where possible. Do not rely on a moving branch when reproducibility matters.
@@ -307,7 +307,7 @@ This issue authorises a non-mutating documentation assessment and one bounded wr
 
 Use the assessment-only toolkit from:
 
-`https://github.com/8ft0-ai/diataxis-for-ai-repos`
+`https://github.com/8ft0-ai/trailpost`
 
 Pinned toolkit commit:
 

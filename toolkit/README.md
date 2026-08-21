@@ -1,6 +1,6 @@
 # Assessment-only V1 toolkit
 
-> **Project-name status:** **TaskFirstDocs** is a provisional name. This toolkit does not approve or adopt it.
+> **Project:** **Trailpost**.
 
 This toolkit helps maintainers decide what repository documentation work is justified before asking an AI coding agent to draft or change anything.
 
