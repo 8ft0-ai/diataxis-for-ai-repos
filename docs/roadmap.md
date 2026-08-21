@@ -1,10 +1,10 @@
 # Project roadmap
 
-This roadmap records the direction of `diataxis-for-ai-repos` after the clarification-only `v0.1.1` release, its bounded post-release control rerun, and the subsequent method and fresh-agent operability evidence cycle.
+This roadmap records the direction of **Trailpost** after the clarification-only `v0.1.1` release, its bounded post-release control rerun, and the subsequent method and fresh-agent operability evidence cycle.
 
 It is not an implementation plan and does not authorise repository changes. A roadmap entry becomes executable work only through the repository's normal GitHub planning and execution process.
 
-**Project-name status:** **TaskFirstDocs** remains a provisional name. This roadmap does not approve or adopt it.
+**Project:** **Trailpost**.
 
 ## Purpose and authority
 
@@ -43,7 +43,7 @@ The idea may become relevant after earlier evidence gates are satisfied. It is n
 
 **State: Current assessment-only capability; post-`v0.1.1` method adaptations published in `v0.1.2`**
 
-The [`v0.1.2` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.2) publishes the accepted assessment-only baseline: the minimal toolkit from `v0.1.0`, the six clarification controls published in `v0.1.1`, and the four post-rerun method adaptations implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36). It helps a maintainer or repository-aware agent:
+The [`v0.1.2` release](https://github.com/8ft0-ai/trailpost/releases/tag/v0.1.2) publishes the accepted assessment-only baseline: the minimal toolkit from `v0.1.0`, the six clarification controls published in `v0.1.1`, and the four post-rerun method adaptations implemented under [#35](https://github.com/8ft0-ai/trailpost/issues/35) and [PR #36](https://github.com/8ft0-ai/trailpost/pull/36). It helps a maintainer or repository-aware agent:
 
 - inspect repository evidence without changing the target repository;
 - identify evidence-supported reader groups;
@@ -64,11 +64,11 @@ The [`v0.1.2` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases
 
 The release stops before documentation drafting. It does not provide a CLI, installer, hosted service, autonomous agent framework, automatic repository scanning or a complete drafting system.
 
-The bounded post-release control rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33) completed and the repository owner accepted an **Adapt** disposition. The rerun supported the central `v0.1.1` controls while identifying four narrower method adaptations: independent-review terminality/idempotency; freshness or zero-history as an execution property rather than a named UI mechanism; publication/write-path capability preflight; and unambiguous separation of the primary `Not tested` result from subordinate execution-evidence states. Those adaptations were implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged through [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
+The bounded post-release control rerun under [#33](https://github.com/8ft0-ai/trailpost/issues/33) completed and the repository owner accepted an **Adapt** disposition. The rerun supported the central `v0.1.1` controls while identifying four narrower method adaptations: independent-review terminality/idempotency; freshness or zero-history as an execution property rather than a named UI mechanism; publication/write-path capability preflight; and unambiguous separation of the primary `Not tested` result from subordinate execution-evidence states. Those adaptations were implemented under [#35](https://github.com/8ft0-ai/trailpost/issues/35) and merged through [PR #36](https://github.com/8ft0-ai/trailpost/pull/36).
 
 The rerun did **not** establish the deferred T2 Production Daily behaviour or T4 offline runtime behaviour from the arxiv-quant-radar fixture. It also does not establish independent maintainer usability, large-repository proportionality, broad repository generality, drafting quality, human validation or model-to-model portability.
 
-After the #35 clarifications merged, [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) tested the narrower question of solo-maintainer operability with fresh-agent assistance. Its final disposition was **Repeat** because the task invocation itself disclosed answer-bearing target specifics that invalidated the intended clean-context evidence. That evidence was not retroactively repaired. [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39) repeated the same two tasks with answer-neutral task contracts, preserved a contaminated T1 attempt as `Blocked`, completed both tasks in eligible fresh contexts, and received one qualifying independent-agent review with judgement `Supports bounded claim`. The repository owner then accepted the corrected repeat.
+After the #35 clarifications merged, [#38](https://github.com/8ft0-ai/trailpost/issues/38) tested the narrower question of solo-maintainer operability with fresh-agent assistance. Its final disposition was **Repeat** because the task invocation itself disclosed answer-bearing target specifics that invalidated the intended clean-context evidence. That evidence was not retroactively repaired. [#39](https://github.com/8ft0-ai/trailpost/issues/39) repeated the same two tasks with answer-neutral task contracts, preserved a contaminated T1 attempt as `Blocked`, completed both tasks in eligible fresh contexts, and received one qualifying independent-agent review with judgement `Supports bounded claim`. The repository owner then accepted the corrected repeat.
 
 That acceptance supports only the bounded conclusion that the assessment task-path workflow was operable in this solo-maintainer/fresh-agent case, for the pinned target, the two tested tasks and the recorded intervention level. It does **not** establish independent-human validation, independent-maintainer usability, population-level usability, broad repository portability, model portability, runtime correctness, scientific validity, generator/scaffold correctness, drafting quality or Horizon 2 readiness.
 
@@ -117,16 +117,16 @@ A successful pilot did not require documentation changes. A useful assessment th
 
 Two fresh-context adoption pilots were completed:
 
-- [#27](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/27) assessed gitstate-lab and accepted `v0.1.0` substantially as tested, while authorising a materially different second pilot;
-- [#28](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/28) assessed arxiv-quant-radar and accepted an **Adapt** disposition.
+- [#27](https://github.com/8ft0-ai/trailpost/issues/27) assessed gitstate-lab and accepted `v0.1.0` substantially as tested, while authorising a materially different second pilot;
+- [#28](https://github.com/8ft0-ai/trailpost/issues/28) assessed arxiv-quant-radar and accepted an **Adapt** disposition.
 
-The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. Those clarifications were implemented under [issue #29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29) and published in `v0.1.1`.
+The second pilot showed that the evidence and stopping disciplines remained useful, but task-pack consistency, executable-prerequisite preflight, blinded evidence isolation, initial evidence budgeting, publication stopping and claim-state attribution required clarification. Those clarifications were implemented under [issue #29](https://github.com/8ft0-ai/trailpost/issues/29) and published in `v0.1.1`.
 
-The bounded post-release rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33) then tested those controls against substantially the same arxiv-quant-radar fixtures. It demonstrated earlier detection of incompatible task contexts and unavailable prerequisites, genuine stopping on blind-context contamination, bounded evidence budgets, clearer observation-versus-judgement attribution, and independent reproduction of one material result. T2 and T4 remained unexecuted because their required clean-network/exact-checkout environments were not established before approval; those are honest untested target behaviours, not target failures.
+The bounded post-release rerun under [#33](https://github.com/8ft0-ai/trailpost/issues/33) then tested those controls against substantially the same arxiv-quant-radar fixtures. It demonstrated earlier detection of incompatible task contexts and unavailable prerequisites, genuine stopping on blind-context contamination, bounded evidence budgets, clearer observation-versus-judgement attribution, and independent reproduction of one material result. T2 and T4 remained unexecuted because their required clean-network/exact-checkout environments were not established before approval; those are honest untested target behaviours, not target failures.
 
-The accepted #33 comparative close-out retained four smaller operating-model adaptations. They were implemented under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged via [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
+The accepted #33 comparative close-out retained four smaller operating-model adaptations. They were implemented under [#35](https://github.com/8ft0-ai/trailpost/issues/35) and merged via [PR #36](https://github.com/8ft0-ai/trailpost/pull/36).
 
-The subsequent operability pilot under [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) ended with **Repeat** after independent review identified answer-bearing information in task invocations that were intended to preserve freshness. The corrected repeat under [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39) used answer-neutral contracts, completed the same two source-inspection tasks in eligible fresh contexts, and was accepted after one qualifying independent-agent review concluded `Supports bounded claim`.
+The subsequent operability pilot under [#38](https://github.com/8ft0-ai/trailpost/issues/38) ended with **Repeat** after independent review identified answer-bearing information in task invocations that were intended to preserve freshness. The corrected repeat under [#39](https://github.com/8ft0-ai/trailpost/issues/39) used answer-neutral contracts, completed the same two source-inspection tasks in eligible fresh contexts, and was accepted after one qualifying independent-agent review concluded `Supports bounded claim`.
 
 Horizon 1 therefore has bounded evidence that the workflow can be operated by the sole maintainer with fresh-agent assistance for the tested case and recorded intervention level. It still does not establish independent maintainer usability, broad repository or model portability, large-repository proportionality or human validation.
 
@@ -138,7 +138,7 @@ The original project direction includes drafting contracts for tutorial, how-to,
 
 A drafting contract should be introduced only when accepted assessment evidence produces a real remediation item that requires that document form.
 
-Issue [#34](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/34) was a mis-scoped attempt to move directly from the #33 `Adapt` decision into target-documentation drafting. It was explicitly superseded and closed `not_planned`; it does not authorise RaceIQ, files-to-prompt, arxiv-quant-radar or any other target remediation.
+Issue [#34](https://github.com/8ft0-ai/trailpost/issues/34) was a mis-scoped attempt to move directly from the #33 `Adapt` decision into target-documentation drafting. It was explicitly superseded and closed `not_planned`; it does not authorise RaceIQ, files-to-prompt, arxiv-quant-radar or any other target remediation.
 
 ### Candidate capability
 
@@ -170,7 +170,7 @@ Before creating drafting contracts, the project should have:
 - an explicit validation procedure for the selected document type;
 - a clear before-and-after task or claim comparison;
 - a stopping condition for unresolved intent, policy or rationale;
-- the completed method baseline from [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) / [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36);
+- the completed method baseline from [#35](https://github.com/8ft0-ai/trailpost/issues/35) / [PR #36](https://github.com/8ft0-ai/trailpost/pull/36);
 - a separate owner decision explicitly authorising the bounded drafting experiment.
 
 The correct next step may be one drafting contract, not all four.
@@ -266,8 +266,7 @@ The project does not currently commit to:
 - all four drafting contracts in one release;
 - broad repository, practitioner, organisation or model generality;
 - recovery of undocumented intent or architectural rationale;
-- replacement of human review, policy decisions or merge authority;
-- approval of the provisional name **TaskFirstDocs**.
+- replacement of human review, policy decisions or merge authority.
 
 These are boundaries against premature commitment, not permanent prohibitions. Moving one into Candidate or Committed requires evidence and a recorded decision.
 
@@ -278,21 +277,21 @@ These are boundaries against premature commitment, not permanent prohibitions. M
 - Ran the executable files-to-prompt experiment and accepted an **Adapt** result.
 - Consolidated the accepted assessment method into the minimal toolkit.
 - Added a bootstrap guide for repositories with existing documentation.
-- Published the assessment-only [`v0.1.0` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.0).
-- Ran two fresh-context adoption pilots, accepted an **Adapt** disposition and implemented the resulting clarification-only assessment controls under [#29](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/29).
-- Published the clarification-only [`v0.1.1` release](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.1) without claiming that the bounded control rerun succeeded.
-- Completed the bounded `v0.1.1` post-release control rerun under [#33](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/33), independently reproduced one material result and accepted a final **Adapt** disposition.
-- Superseded the mis-scoped Horizon 2 detour [#34](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/34) without target documentation or repository mutation.
-- Implemented the four accepted post-rerun method adaptations under [#35](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/35) and merged them through [PR #36](https://github.com/8ft0-ai/diataxis-for-ai-repos/pull/36).
-- Ran the first solo-maintainer/fresh-agent operability pilot under [#38](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/38) and recorded final disposition **Repeat** after the intended freshness evidence was invalidated by answer-bearing task invocation material.
-- Repeated the same two tasks with answer-neutral contracts under [#39](https://github.com/8ft0-ai/diataxis-for-ai-repos/issues/39); one qualifying independent-agent review concluded `Supports bounded claim`, and the repository owner accepted the corrected bounded operability evidence.
-- Published [`v0.1.2`](https://github.com/8ft0-ai/diataxis-for-ai-repos/releases/tag/v0.1.2) as the accepted post-`v0.1.1` assessment-method baseline without expanding the assessment-only scope.
+- Published the assessment-only [`v0.1.0` release](https://github.com/8ft0-ai/trailpost/releases/tag/v0.1.0).
+- Ran two fresh-context adoption pilots, accepted an **Adapt** disposition and implemented the resulting clarification-only assessment controls under [#29](https://github.com/8ft0-ai/trailpost/issues/29).
+- Published the clarification-only [`v0.1.1` release](https://github.com/8ft0-ai/trailpost/releases/tag/v0.1.1) without claiming that the bounded control rerun succeeded.
+- Completed the bounded `v0.1.1` post-release control rerun under [#33](https://github.com/8ft0-ai/trailpost/issues/33), independently reproduced one material result and accepted a final **Adapt** disposition.
+- Superseded the mis-scoped Horizon 2 detour [#34](https://github.com/8ft0-ai/trailpost/issues/34) without target documentation or repository mutation.
+- Implemented the four accepted post-rerun method adaptations under [#35](https://github.com/8ft0-ai/trailpost/issues/35) and merged them through [PR #36](https://github.com/8ft0-ai/trailpost/pull/36).
+- Ran the first solo-maintainer/fresh-agent operability pilot under [#38](https://github.com/8ft0-ai/trailpost/issues/38) and recorded final disposition **Repeat** after the intended freshness evidence was invalidated by answer-bearing task invocation material.
+- Repeated the same two tasks with answer-neutral contracts under [#39](https://github.com/8ft0-ai/trailpost/issues/39); one qualifying independent-agent review concluded `Supports bounded claim`, and the repository owner accepted the corrected bounded operability evidence.
+- Published [`v0.1.2`](https://github.com/8ft0-ai/trailpost/releases/tag/v0.1.2) as the accepted post-`v0.1.1` assessment-method baseline without expanding the assessment-only scope.
 
 ## Current commitments
 
 There is currently **no active committed work**.
 
-Horizon 2 remains a Candidate direction. No drafting experiment, target remediation, release, automation, naming decision or broader capability is authorised merely by the completion of #35 or acceptance of #39.
+Horizon 2 remains a Candidate direction. No drafting experiment, target remediation, release, automation or broader capability is authorised merely by the completion of #35 or acceptance of #39.
 
 Any next implementation requires a new GitHub decision or execution contract with its own evidence, scope, validation and authority boundary.
 
@@ -303,4 +302,3 @@ Any next implementation requires a new GitHub decision or execution contract wit
 - Which document type should receive the first drafting contract if evidence justifies one and the owner separately authorises it?
 - What form of independent review is proportionate for later drafting work?
 - When, if ever, does repeated manual work justify supporting tooling?
-- Should **TaskFirstDocs** be approved, changed or retired as the project name?
