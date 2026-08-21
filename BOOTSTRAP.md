@@ -24,7 +24,7 @@ Use the repository's current default branch unless I provide a different target.
 
 Use the assessment-only toolkit from:
 
-`https://github.com/8ft0-ai/diataxis-for-ai-repos`
+`https://github.com/8ft0-ai/trailpost`
 
 Pinned toolkit commit:
 
